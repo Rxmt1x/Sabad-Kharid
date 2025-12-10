@@ -1,4 +1,4 @@
-const products = [
+let mahsolat = [
 {
     id:1,
     name: " تیشرت مشکی",
@@ -96,4 +96,4 @@ const products = [
     price: 7000000,
     category: "shoes",
 },
-]
+];

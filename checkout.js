@@ -1,9 +1,7 @@
-let cart=[];
 function loadCart(){
     const carteZakhireShode=localStorage.getItem("cart");
-    if(carteZakhireShode){
-        cart=JSON.parse(carteZakhireShode);
-    }
+    if(carteZakhireShode)cart=JSON.parse(carteZakhireShode);
+    else cart=[];
 }
 function namayesheCheckout(){
     loadCart();
@@ -29,4 +27,6 @@ function namayesheCheckout(){
         document.getElementById("mablaghe-nahaie").innerText=mablagh.mablagheNahaie+"مبلغ نهایی:";
     }
     namayesheCheckout();
+
+
         

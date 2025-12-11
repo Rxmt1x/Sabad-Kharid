@@ -97,5 +97,6 @@ function mohasebeCheckout(){
     const maliat=noMaliat*0.09;
     const mablagheNahaie=noMaliat+maliat;
     return{noMaliat,maliat,mablagheNahaie};
+
+    mohasebeCheckout();
 }
-mohasebeCheckout();

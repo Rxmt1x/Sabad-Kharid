@@ -1,12 +1,8 @@
 let cart=[];
 function loadCart(){
-    const carteZakhireShode = localStorage.getItem("cart");
-    if(carteZakhireShode) {
-        cart=JSON.parse(carteZakhireShode);
-    }
-    else{
-        cart=[];
-    }
+    const carteZakhireShode=localStorage.getItem("cart");
+    if(carteZakhireShode)cart=JSON.parse(carteZakhireShode);
+    else cart=[];
 }
 loadCart();
 
@@ -56,7 +52,7 @@ function namayesheCart(){
     `;
     container.appendChild(div);
     });
-    document.getElementById("mablaghe-koll").innerText=mablagheKoll+":جمع کل"
+    document.getElementById("mablaghe-koll").innerText=mablagheKoll+"جمع کل:"
 }
 namayesheCart();
 
@@ -89,4 +85,17 @@ function hazfAzCart(idMahsol){
 const darsadeMaliat=0.09;
 
 //hesab ketab 
-
+ 
+function mohasebeCheckout(){
+    loadCart();
+    let noMaliat=0;
+    cart.forEach(mahsoleCart =>{
+        const mahsol=mahsolat.find(p =>p.id===mahsoleCart.idMahsol);
+        if(!mahsol)return;
+        noMaliat+=mahsol.price*mahsoleCart.teedadMahsol;
+    });
+    const maliat=noMaliat*0.09;
+    const mablagheNahaie=noMaliat+maliat;
+    return{noMaliat,maliat,mablagheNahaie};
+}
+mohasebeCheckout();

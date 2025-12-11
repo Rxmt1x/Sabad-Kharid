@@ -5,3 +5,28 @@ function loadCart(){
         cart=JSON.parse(carteZakhireShode);
     }
 }
+function namayesheCheckout(){
+    loadCart();
+    const container=document.getElementById("itemha");
+    container.innerHTML="";
+
+        cart.forEach(mahsoleCart =>{
+        const mahsol= mahsolat.find(p =>p.id===mahsoleCart.idMahsol);
+        if(!mahsol)return;
+
+        const div=document.createElement("div");
+        div.innerHTML=`
+        <p>${mahsol.name}x${mahsoleCart.teedadMahsol}</p>
+        <p>${mahsol.price * mahsoleCart.teedadMahsol}</p>
+        <hr>
+        `;
+        container.appendChild(div);
+        });
+
+        const mablagh=mohasebeCheckout();
+        document.getElementById("no-maliat").innerText=mablagh.noMaliat+"مبلغ بدون مالیات:";
+        document.getElementById("maliat").innerText=mablagh.maliat+"مبلغ مالیات:";
+        document.getElementById("mablaghe-nahaie").innerText=mablagh.mablagheNahaie+"مبلغ نهایی:";
+    }
+    namayesheCheckout();
+        

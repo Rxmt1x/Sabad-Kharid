@@ -30,8 +30,9 @@ namayesheCart();
 function namayesheCart(){
     loadCart();
     const container=document.getElementById("mahsolate-cart");
+    if(!container)return;
     container.innerHTML="";
-    let mablagheKoll = 0;
+    let mablagheKoll=0;
 
     cart.forEach(mahsoleCart =>{
         const mahsol= mahsolat.find(p =>p.id===mahsoleCart.idMahsol);
@@ -54,6 +55,7 @@ function namayesheCart(){
     });
     document.getElementById("mablaghe-koll").innerText=mablagheKoll+"جمع کل:"
 }
+if(document.getElementById("mahsolate-cart"))
 namayesheCart();
 
 //kam kardan mahsol as cart
@@ -81,8 +83,8 @@ function hazfAzCart(idMahsol){
     namayesheCart();
 }
 
-//maliate 9%
-const darsadeMaliat=0.09;
+//maliate 10%
+const darsadeMaliat=0.1;
 
 //hesab ketab 
  
@@ -94,9 +96,7 @@ function mohasebeCheckout(){
         if(!mahsol)return;
         noMaliat+=mahsol.price*mahsoleCart.teedadMahsol;
     });
-    const maliat=noMaliat*0.09;
+    const maliat=noMaliat*0.1;
     const mablagheNahaie=noMaliat+maliat;
     return{noMaliat,maliat,mablagheNahaie};
-
-    mohasebeCheckout();
 }

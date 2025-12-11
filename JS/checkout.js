@@ -26,7 +26,13 @@ function namayesheCheckout(){
         document.getElementById("maliat").innerText=mablagh.maliat+"مبلغ مالیات:";
         document.getElementById("mablaghe-nahaie").innerText=mablagh.mablagheNahaie+"مبلغ نهایی:";
     }
+    if (document.getElementById("itemha"))
     namayesheCheckout();
+
+    document.getElementById("pardakht").addEventListener("click",()=>{
+        window.location.href="https://sandbox.zarinpal.com/pg/StartPay/";//link kar nemikone bayad avaz konam
+    });
+    
 
 
         

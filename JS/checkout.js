@@ -30,7 +30,7 @@ function namayesheCheckout(){
     namayesheCheckout();
 
     document.getElementById("pardakht").addEventListener("click",()=>{
-        window.location.href="https://sandbox.zarinpal.com/pg/StartPay/";//link kar nemikone bayad avaz konam
+        window.location.href="https://sandbox.zarinpal.com/pg/StartPay/";
     });
     
 

@@ -53,7 +53,17 @@ function namayesheCart(){
     `;
     container.appendChild(div);
     });
-    document.getElementById("mablaghe-koll").innerText=mablagheKoll+"جمع کل:"
+    if(cart.length===0){
+        document.getElementById("mablaghe-koll").style.display="none";
+        document.getElementById("sorat-hesab").style.display="none";
+        document.getElementById("sabade-khali").style.display="block";
+    }
+    else{
+        document.getElementById("mablaghe-koll").style.display="block";
+        document.getElementById("sorat-hesab").style.display="block";
+        document.getElementById("sabade-khali").style.display="none";
+        document.getElementById("mablaghe-koll").innerText=mablagheKoll+"جمع کل:"
+    }
 }
 if(document.getElementById("mahsolate-cart"))
 namayesheCart();

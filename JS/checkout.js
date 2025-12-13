@@ -29,10 +29,7 @@ function namayesheCheckout(){
     if (document.getElementById("itemha"))
     namayesheCheckout();
 
-    document.getElementById("pardakht").addEventListener("click",()=>{
-        window.location.href="https://sandbox.zarinpal.com/pg/StartPay/";//link kar nemikone bayad avaz konam
-    });
-    
+
 
 
         

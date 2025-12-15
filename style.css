@@ -20,6 +20,9 @@ body{
     border-bottom: 2px solid  rgb(139, 139, 139);
     position: relative;
 }
+.gheymat{
+    font-size: 15px;
+}
 /*style index*/
 .boxe-lebasha{
     display: grid;
@@ -65,7 +68,7 @@ body{
     transition: all 0.5s ease;
 }
 .cartpage:hover{
-        background-color: rgb(161, 161, 161);
+    background-color: rgb(161, 161, 161);
     color: rgb(240, 215, 177);
     border-color: rgb(240, 215, 177);
     transform: scale(1.2);
@@ -80,7 +83,7 @@ body{
 }
 .boxe-Tshirt{
     background-color: ghostwhite;
-    height: 300px;
+    height: 310px;
     text-align: center;
     border: 2px solid rgb(179, 179, 179);
     max-width: 500px;
@@ -114,7 +117,7 @@ body{
 }
 .boxe-shalvar{
     background-color: ghostwhite;
-    height: 300px;
+    height: 310px;
     text-align: center;
     border: 2px solid rgb(179, 179, 179);
     max-width: 500px;
@@ -148,7 +151,7 @@ body{
 }
 .boxe-hoodie{
     background-color: ghostwhite;
-    height: 300px;
+    height: 310px;
     text-align: center;
     border: 2px solid rgb(179, 179, 179);
     max-width: 500px;
@@ -182,7 +185,7 @@ body{
 }
 .boxe-kafsh{
     background-color: ghostwhite;
-    height: 300px;
+    height: 310px;
     text-align: center;
     border: 2px solid rgb(179, 179, 179);
     max-width: 500px;
@@ -242,6 +245,8 @@ body{
     align-items: center;
     justify-content: center;
     max-width: 300px;
+    margin-left: 100px;
+    margin-top: 50px;
 }
 .sabad-info{
     display: flex;
@@ -255,6 +260,7 @@ body{
     height: 200px;
     border-radius: 20px;
     margin-left: 20px;
+    margin-right: 60px;
 }
 .info{
     flex:1;
@@ -265,6 +271,7 @@ body{
     border:2px solid rgb(179, 179, 179);
     overflow: hidden;
     border-radius: 10px;
+    margin-left: 400px;
 }
 .boxe-button button{
     border: none;
@@ -288,3 +295,56 @@ body{
     transform: scale(1.05);
     color: white;
 }
+/*style checkout*/
+.containere-checkout{
+    display: flex;
+    gap:20px;
+    padding: 30px;
+    max-width: 600px;
+    margin: auto;
+}
+.itemhaye-checkout{
+    flex:2 ;
+    padding: 20px;
+    
+}
+h2{
+    margin-bottom: 20px;
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+}
+.itemhaye-checkout div > div{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.majmoee-gheymat{
+    flex: 1.3;
+    padding: 20px;
+    height: fit-content;
+    border: 1px solid rgb(179, 179, 179);
+    border-radius: 15px;
+    margin-top:67px ;
+}
+.majmoee-gheymat p{
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+.majmoee-gheymat hr{
+    margin: 15px ;
+}
+#pardakht{
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background: blanchedalmond;
+    font-size: 16px;
+    cursor: pointer;
+}
+#pardakht:hover{
+    background-color: rgb(196, 163, 113);
+    transform: scale(1.05);
+    color: white;
+}
+/*bayad adado farsi konam*/

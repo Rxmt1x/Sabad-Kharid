@@ -22,9 +22,9 @@ function namayesheCheckout(){
         });
 
         const mablagh=mohasebeCheckout();
-        document.getElementById("no-maliat").innerText=mablagh.noMaliat+"مبلغ بدون مالیات:";
-        document.getElementById("maliat").innerText=mablagh.maliat+"مبلغ مالیات:";
-        document.getElementById("mablaghe-nahaie").innerText=mablagh.mablagheNahaie+"مبلغ نهایی:";
+        document.getElementById("no-maliat").innerText=mablagh.noMaliat+": بدون مالیات";
+        document.getElementById("maliat").innerText=mablagh.maliat+": مالیات"
+        document.getElementById("mablaghe-nahaie").innerText=mablagh.mablagheNahaie+": مبلغ نهایی";
     }
     if (document.getElementById("itemha"))
     namayesheCheckout();

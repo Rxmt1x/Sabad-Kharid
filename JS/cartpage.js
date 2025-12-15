@@ -116,3 +116,4 @@ function mohasebeCheckout(){
     const mablagheNahaie=noMaliat+maliat;
     return{noMaliat,maliat,mablagheNahaie};
 }
+

@@ -41,14 +41,20 @@ function namayesheCart(){
         mablagheKoll+=kolleMahsolat;
 
         const div=document.createElement("div");
+        div.classList.add("sabad-info");
         div.innerHTML= `
+        <img src="${mahsol.image}"class="akse-mahsolat">
+        <div class="info">
         <h4>${mahsol.name}</h4>
-        : قیمت واحد <p>${mahsol.price}</p>
-     : تعداد <p>   ${mahsoleCart.teedadMahsol}</p>
-     : قیمت کل<p>   ${kolleMahsolat}</p>
+        قیمت واحد:<p>${mahsol.price}</p>
+        تعداد:<p>${mahsoleCart.teedadMahsol}</p>  
+        قیمت کل: <p>${kolleMahsolat}</p>
+        </div>
+        <div class="boxe-button">
         <button onclick="ezafeBeCart(${mahsol.id})">+</button>
         <button onclick="kamKardanAzCart(${mahsol.id})">-</button>
         <button onclick="hazfAzCart(${mahsol.id})">x</button>
+        </div>
         <hr>
     `;
     container.appendChild(div);

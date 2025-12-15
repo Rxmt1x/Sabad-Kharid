@@ -2,13 +2,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family:  "vazirmatn", sans-serif;
     font-weight: 700;
 }
 body{
     background-color: #ececec;
     color: black;
     line-height: 1.6;
+    direction: rtl;
+    font-feature-settings: "ss01";
 }
 .header{
     background-color: lightgray;
@@ -219,4 +221,70 @@ body{
     pointer-events: none;
     backdrop-filter: blur(3px);
     border-radius: 30px;
+}
+/*style cart*/
+.chidemane-cart{
+    display:flex;
+    gap: 25px;
+    padding:25px;
+}
+.liste-mahsolat{
+    flex: 3;
+}
+.tasvie{
+    flex:1;
+    border: 2px solid rgb(179, 179, 179);
+    padding: 15px;
+    border-radius: 15px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 300px;
+}
+.sabad-info{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+.akse-mahsolat{
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    margin-left: 20px;
+}
+.info{
+    flex:1;
+}
+.boxe-button{
+    display: flex;
+    align-items: center;
+    border:2px solid rgb(179, 179, 179);
+    overflow: hidden;
+    border-radius: 10px;
+}
+.boxe-button button{
+    border: none;
+    padding: 8px 18px;
+    cursor: pointer;
+    font-size: 18px;
+}
+.sorat-hesab-btn{
+    display: block;
+    text-decoration: none;
+    background-color: blanchedalmond;
+    color: black;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 200px;
+    text-align: center;
+    margin-top: 10px;
+}
+.sorat-hesab-btn:hover{
+    background-color: rgb(196, 163, 113);
+    transform: scale(1.05);
+    color: white;
 }

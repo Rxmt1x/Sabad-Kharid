@@ -4,6 +4,7 @@ let mahsolat = [
     name: " تیشرت مشکی",
     price: 650000,
     category: "tshirt",
+    image: "../Images/black T.jpg",
 },
 
 {
@@ -11,6 +12,7 @@ let mahsolat = [
     name: " تیشرت سفید",
     price: 650000,
     category: "tshirt",
+    image: "../Images/white T.jpg",
 },
 
 {
@@ -18,6 +20,7 @@ let mahsolat = [
     name: " تیشرت آبی",
     price: 700000,
     category: "tshirt",
+    image: "../Images/blue T.avif",
 },
 
 {
@@ -25,6 +28,7 @@ let mahsolat = [
     name: "تیشرت طرح دار",
     price: 750000,
     category: "tshirt",
+    image: "../Images/tarh T.avif",
 },
 
 {
@@ -32,6 +36,7 @@ let mahsolat = [
     name: "شلوار جین",
     price: 1000000,
     category: "pants",
+    image: "../Images/blue jeans.webp",
 },
 
 {
@@ -39,6 +44,7 @@ let mahsolat = [
     name: " شلوار طوسی",
     price: 1000000,
     category: "pants",
+    image: "../Images/gray pants.jpg",
 },
 
 {
@@ -46,6 +52,7 @@ let mahsolat = [
     name: " شلوار مشکی",
     price: 1100000,
     category: "pants",
+    image: "../Images/black pants.webp",
 },
 
 {
@@ -53,6 +60,7 @@ let mahsolat = [
     name: " هودی مشکی",
     price: 900000,
     category: "hoodie",
+    image: "../Images/black hoodie.webp",
 },
 
 {
@@ -60,6 +68,7 @@ let mahsolat = [
     name: " هودی سفید",
     price: 850000,
     category: "hoodie",
+    image: "../Images/white hoodie.webp",
 },
 
 {
@@ -67,6 +76,7 @@ let mahsolat = [
     name: "هودی طوسی",
     price: 900000,
     category: "hoodie",
+    image: "../Images/gray hoodie.webp",
 },
 
 {
@@ -74,6 +84,7 @@ let mahsolat = [
     name: " هودی سبز",
     price: 800000,
     category: "hoodie",
+    image: "../Images/green hoodie.jpg",
 },
 
 {
@@ -81,6 +92,7 @@ let mahsolat = [
     name: " بوت چرم مشکی",
     price: 14500000,
     category: "shoes",
+    image: "../Images/black leather boots.webp",
 },
 
 {
@@ -88,6 +100,7 @@ let mahsolat = [
     name: " کتونی مشکی",
     price: 7500000,
     category: "shoes",
+    image: "../Images/black Js.avif",
 },
 
 {
@@ -95,5 +108,6 @@ let mahsolat = [
     name: " کتونی سفید",
     price: 7000000,
     category: "shoes",
+    image: "../Images/white Js.webp",
 },
 ];

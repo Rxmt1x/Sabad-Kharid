@@ -46,9 +46,9 @@ function namayesheCart(){
         <img src="${mahsol.image}"class="akse-mahsolat">
         <div class="info">
         <h4>${mahsol.name}</h4>
-        قیمت واحد:<p>${mahsol.price}</p>
-        تعداد:<p>${mahsoleCart.teedadMahsol}</p>  
-        قیمت کل: <p>${kolleMahsolat}</p>
+        قیمت واحد:<p>${adadFarsi(mahsol.price)}</p>
+        تعداد:<p>${adadFarsi(mahsoleCart.teedadMahsol)}</p>  
+        قیمت کل: <p>${adadFarsi(kolleMahsolat)}</p>
         </div>
         <div class="boxe-button">
         <button onclick="ezafeBeCart(${mahsol.id})">+</button>
@@ -60,15 +60,15 @@ function namayesheCart(){
     container.appendChild(div);
     });
     if(cart.length===0){
-        document.getElementById("mablaghe-koll").style.display="none";
-        document.getElementById("sorat-hesab").style.display="none";
-        document.getElementById("sabade-khali").style.display="block";
+        document.querySelector(".tasvie").style.display="none";
+        document.querySelector(".chidemane-cart").style.justifyContent="center";
+        document.getElementById("sabade-khali").style.display="flex";
     }
     else{
-        document.getElementById("mablaghe-koll").style.display="block";
-        document.getElementById("sorat-hesab").style.display="block";
-        document.getElementById("sabade-khali").style.display="none";
-        document.getElementById("mablaghe-koll").innerText=mablagheKoll+"جمع کل:"
+        document.querySelector(".tasvie").style.display="block";
+        document.querySelector(".chidemane-cart").style.justifyContent="space-betweens";
+        document.getElementById("sabade-khali").style.display="none"
+        document.getElementById("mablaghe-koll").innerText=adadFarsi(mablagheKoll)+"جمع کل:"
     }
 }
 if(document.getElementById("mahsolate-cart"))
@@ -117,3 +117,8 @@ function mohasebeCheckout(){
     return{noMaliat,maliat,mablagheNahaie};
 }
 
+//farsi kardane adad
+
+function adadFarsi(number) {
+    return number.toLocaleString('fa-IR');
+}

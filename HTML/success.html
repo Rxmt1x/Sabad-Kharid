@@ -10,9 +10,13 @@
     <title>موفق</title>
 </head>
 <body>
-    <h1>پرداخت موفقیت امیز بود</h1>
-    <a href="../index.html" onclick="pakSazi()">صفحه اصلی</a>
-
+    <div class="header">
+    <p>پرداخت موفقیت امیز بود</p>
+    </div>
+    <div class="safhe-success">
+    <a class="btn successSafheAsli" href="../index.html" onclick="pakSazi()">صفحه اصلی</a>
+    </div>
+    
     <script>
         function pakSazi(){localStorage.removeItem("cart");}
     </script>

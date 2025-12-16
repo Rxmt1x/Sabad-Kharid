@@ -14,17 +14,17 @@ function namayesheCheckout(){
 
         const div=document.createElement("div");
         div.innerHTML=`
-        <p>${mahsol.name}x${mahsoleCart.teedadMahsol}</p>
-        <p>${mahsol.price * mahsoleCart.teedadMahsol}</p>
+        <p>${mahsol.name}x${adadFarsi(mahsoleCart.teedadMahsol)}</p>
+        <p>${adadFarsi(mahsol.price * mahsoleCart.teedadMahsol)}</p>
         <hr>
         `;
         container.appendChild(div);
         });
 
         const mablagh=mohasebeCheckout();
-        document.getElementById("no-maliat").innerText=mablagh.noMaliat+": بدون مالیات";
-        document.getElementById("maliat").innerText=mablagh.maliat+": مالیات"
-        document.getElementById("mablaghe-nahaie").innerText=mablagh.mablagheNahaie+": مبلغ نهایی";
+        document.getElementById("no-maliat").innerText=adadFarsi(mablagh.noMaliat)+": بدون مالیات";
+        document.getElementById("maliat").innerText=adadFarsi(mablagh.maliat)+": مالیات"
+        document.getElementById("mablaghe-nahaie").innerText=adadFarsi(mablagh.mablagheNahaie)+": مبلغ نهایی";
     }
     if (document.getElementById("itemha"))
     namayesheCheckout();

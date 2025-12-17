@@ -6,7 +6,7 @@
     font-weight: 700;
 }
 body{
-    background-color: rgb(248, 240, 231);
+    background-color:  #e6ffe8;
     color: black;
     line-height: 1.6;
     direction: rtl;
@@ -14,7 +14,7 @@ body{
 }
 .header{
     background-color: #2f7d6d;
-    color: blanchedalmond;
+    color: white;
     text-align: center;
     padding: 30px;
     font-size: 20px;
@@ -33,10 +33,10 @@ body{
     margin: 50px auto;
 }
 .boxe-lebas{
-    background-color:rgb(248, 240, 231);
+    background-color:#2f7d6d;
     height: 200px;
     text-align: center;
-    border: 2px solid rgb(179, 179, 179);
+    border: 4px solid rgb(0, 0, 0);
     max-width: 400px;
     display: flex;
     flex-direction:column;
@@ -45,13 +45,13 @@ body{
     border-radius: 30px;
     transition: all 0.5s ease;
     text-decoration: none;
-    color: black;
+    color: white;
     font-size: 20px;
 }
 .boxe-lebas:hover{
-    background-color: rgb(161, 161, 161);
-    color: rgb(240, 215, 177);
-    border-color: rgb(240, 215, 177);
+    background-color: rgb(156, 231, 206);
+    color: rgb(110, 110, 110);
+    border-color:rgb(110, 110, 110);
     transform: scale(1.1);
 }
 .cartpage{
@@ -60,11 +60,11 @@ body{
     top: 17px ;
     font-size: 17px;
     text-decoration: none;
-    color: blanchedalmond;
-    background-color:  rgb(161, 161, 161);
-    border: 2px solid rgb(240, 215, 177);
+    color: rgb(110, 110, 110);
+    background-color:  rgb(156, 231, 206);
+    border: 4px solid rgb(110, 110, 110);
     max-width: 100px;
-    padding: 15px;
+    padding: 13px;
     border-radius: 10px;
     transition: all 0.5s ease;
 }
@@ -276,13 +276,13 @@ body{
     padding: 8px 18px;
     cursor: pointer;
     font-size: 18px;
-    background-color: rgb(248, 240, 231);
+    background-color: whitesmoke;
 }
 .sorat-hesab-btn{
     display: block;
     text-decoration: none;
-    background-color: blanchedalmond;
-    color: black;
+    background-color:  #2f7d6d;
+    color: white;
     padding: 10px;
     border-radius: 10px;
     max-width: 200px;
@@ -290,9 +290,9 @@ body{
     margin-top: 10px;
 }
 .sorat-hesab-btn:hover{
-    background-color: rgb(196, 163, 113);
+    background-color: rgb(156, 231, 206);
     transform: scale(1.05);
-    color: white;
+    color: rgb(110, 110, 110);
 }
 /*style checkout*/
 .containere-checkout{
@@ -337,14 +337,15 @@ h2{
     padding: 10px;
     border-radius: 10px;
     border: none;
-    background: blanchedalmond;
+    background: #2f7d6d;
     font-size: 16px;
     cursor: pointer;
+    color: white;
 }
 #pardakht:hover{
-    background-color: rgb(196, 163, 113);
+    background-color: rgb(156, 231, 206);
     transform: scale(1.05);
-    color: white;
+    color: rgb(110, 110, 110);
 }
 /*style safhe pardakht*/
 .safhe-pardakht{
@@ -360,9 +361,9 @@ h2{
     align-items: center;
     width: 200px;
     height: 50px;
-    background-color: blanchedalmond;
+    background-color: #2f7d6d;
     text-decoration: none;
-    color: black;
+    color: white;
     border-radius: 15px;
     font-size: 20px;
     transition: all 0.5s ease;
@@ -386,10 +387,12 @@ h2{
     height: 500px;
 }
 .btn.mojadad:hover{
-    color: rgb(165, 130, 85);
+    background-color: rgb(156, 231, 206);
+    color: rgb(110, 110, 110);
 }
 .btn.safheAsli:hover{
-    color: rgb(165, 130, 85);
+    background-color: rgb(156, 231, 206);
+    color: rgb(110, 110, 110);
 }
 /*style safhe success*/
 .safhe-success{
@@ -400,7 +403,8 @@ h2{
     height: 500px;
 }
 .btn.successSafheAsli:hover{
-    color: rgb(165, 130, 85);
+    background-color: rgb(156, 231, 206);
+    color: rgb(110, 110, 110);
 }
 /*style sabade khali*/
 #sabade-khali{
@@ -410,5 +414,5 @@ h2{
     justify-content: center;
     align-items: center;
     font-size: 20px;
-    color: rgb(175, 140, 93);
+    color: rgb(110, 110, 110);;
 }

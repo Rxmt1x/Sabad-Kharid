@@ -65,10 +65,10 @@ function namayesheCart(){
         document.getElementById("sabade-khali").style.display="flex";
     }
     else{
-        document.querySelector(".tasvie").style.display="block";
+        document.querySelector(".tasvie").style.display="flex";
         document.querySelector(".chidemane-cart").style.justifyContent="space-betweens";
         document.getElementById("sabade-khali").style.display="none"
-        document.getElementById("mablaghe-koll").innerText=adadFarsi(mablagheKoll)+"جمع کل:"
+        document.getElementById("mablaghe-koll").innerText=adadFarsi(mablagheKoll)+": جمع کل "
     }
 }
 if(document.getElementById("mahsolate-cart"))

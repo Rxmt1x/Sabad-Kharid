@@ -1,12 +1,10 @@
 function loadCart(){
     const carteZakhireShode=localStorage.getItem("cart");
     if(carteZakhireShode)cart=JSON.parse(carteZakhireShode);
-    else cart=[];
 }
+
 function namayesheCheckout(){
-    loadCart();
     const container=document.getElementById("itemha");
-    container.innerHTML="";
 
         cart.forEach(mahsoleCart =>{
         const mahsol= mahsolat.find(p =>p.id===mahsoleCart.idMahsol);
@@ -26,7 +24,19 @@ function namayesheCheckout(){
         document.getElementById("maliat").innerText=adadFarsi(mablagh.maliat)+": مالیات"
         document.getElementById("mablaghe-nahaie").innerText=adadFarsi(mablagh.mablagheNahaie)+": مبلغ نهایی";
     }
-    if (document.getElementById("itemha"))
+
+function mohasebeCheckout(){
+    let noMaliat=0;
+    cart.forEach(mahsoleCart =>{
+        const mahsol=mahsolat.find(p =>p.id===mahsoleCart.idMahsol);
+        if(!mahsol)return;
+        noMaliat+=mahsol.price*mahsoleCart.teedadMahsol;
+    });
+    const maliat=noMaliat*0.1;
+    const mablagheNahaie=noMaliat+maliat;
+    return{noMaliat,maliat,mablagheNahaie};
+}
+
     namayesheCheckout();
 
 

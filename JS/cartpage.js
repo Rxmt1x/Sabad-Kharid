@@ -4,9 +4,8 @@ function loadCart(){
     if(carteZakhireShode)cart=JSON.parse(carteZakhireShode);
     else cart=[];
 }
-loadCart();
 
-//ba button+ dakhele html lebasa mahsolato be cart ezafe mikone
+//item haro ba click be cart ezafe mikone
 
 function zakhireCart(){
     localStorage.setItem("cart",JSON.stringify(cart));
@@ -25,6 +24,7 @@ function ezafeBeCart(idMahsol){
 zakhireCart();
 namayesheCart();
 }
+
 //code ro be tasvir mikeshe ba html daroni
 
 function namayesheCart(){
@@ -59,6 +59,7 @@ function namayesheCart(){
     `;
     container.appendChild(div);
     });
+
     if(cart.length===0){
         document.querySelector(".tasvie").style.display="none";
         document.querySelector(".chidemane-cart").style.justifyContent="center";
@@ -66,19 +67,16 @@ function namayesheCart(){
     }
     else{
         document.querySelector(".tasvie").style.display="flex";
-        document.querySelector(".chidemane-cart").style.justifyContent="space-betweens";
         document.getElementById("sabade-khali").style.display="none"
         document.getElementById("mablaghe-koll").innerText=adadFarsi(mablagheKoll)+": جمع کل "
     }
 }
-if(document.getElementById("mahsolate-cart"))
-namayesheCart();
+if(document.getElementById("mahsolate-cart")){
+namayesheCart();}
 
 //kam kardan mahsol as cart
 
 function kamKardanAzCart(idMahsol){
-    loadCart();
-
     const mahsol=cart.find(p =>p.idMahsol===idMahsol);
     if(!mahsol)return;
     mahsol.teedadMahsol-=1;
@@ -88,33 +86,16 @@ function kamKardanAzCart(idMahsol){
     }
     zakhireCart();
     namayesheCart();
+    loadCart();
 }
 
 //hazf kardan mahsole az cart
 
 function hazfAzCart(idMahsol){
-    loadCart();
     cart=cart.filter(p =>p.idMahsol!==idMahsol);
     zakhireCart();
     namayesheCart();
-}
-
-//maliate 10%
-const darsadeMaliat=0.1;
-
-//hesab ketab 
- 
-function mohasebeCheckout(){
     loadCart();
-    let noMaliat=0;
-    cart.forEach(mahsoleCart =>{
-        const mahsol=mahsolat.find(p =>p.id===mahsoleCart.idMahsol);
-        if(!mahsol)return;
-        noMaliat+=mahsol.price*mahsoleCart.teedadMahsol;
-    });
-    const maliat=noMaliat*0.1;
-    const mablagheNahaie=noMaliat+maliat;
-    return{noMaliat,maliat,mablagheNahaie};
 }
 
 //farsi kardane adad
@@ -122,3 +103,5 @@ function mohasebeCheckout(){
 function adadFarsi(number) {
     return number.toLocaleString('fa-IR');
 }
+
+namayesheCart();

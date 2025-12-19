@@ -71,15 +71,15 @@ body{
 .cartpage:hover{
     transform: scale(1.2);
 }
-/*style T-shirt*/
-.boxe-Tshirtha{
+/*style boxe lebasa*/
+.boxhaye{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 50px;
     max-width: 1500px;
     margin: 75px auto;
 }
-.boxe-Tshirt{
+.boxe{
     border-bottom: 4px solid rgb(110, 110, 110);
     height: 310px;
     text-align: center;
@@ -95,108 +95,12 @@ body{
     font-size: 20px;
     cursor: pointer;
 }
-.boxe-Tshirt:hover{
+.boxe:hover{
     background-color:rgb(156, 231, 206);
     border-color: #2f7d6d;
     transform: scale(1.05);
 }
-.boxe-Tshirt:hover .add-be-cart{
-    opacity: 1;
-}
-/*style shalvar*/
-.boxe-shalvarha{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 50px;
-    max-width: 1500px;
-    margin: 75px auto;
-}
-.boxe-shalvar{
-    border-bottom: 4px solid rgb(110, 110, 110);
-    height: 310px;
-    text-align: center;
-    max-width: 500px;
-    display: flex;
-    flex-direction:column;
-    align-items: center;
-    justify-content: center; 
-    border-radius: 30px;
-    transition: all 0.5s ease;
-    text-decoration: none;
-    color: black;
-    font-size: 20px;
-    cursor: pointer;
-}
-.boxe-shalvar:hover{
-    background-color:rgb(156, 231, 206);
-    border-color: #2f7d6d;
-    transform: scale(1.05);
-}
-.boxe-shalvar:hover .add-be-cart{
-    opacity: 1;
-}
-/*style hoodie*/
-.boxe-hoodieha{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 50px;
-    max-width: 1500px;
-    margin: 75px auto;
-}
-.boxe-hoodie{
-    border-bottom: 4px solid rgb(110, 110, 110);
-    height: 310px;
-    text-align: center;
-    max-width: 500px;
-    display: flex;
-    flex-direction:column;
-    align-items: center;
-    justify-content: center; 
-    border-radius: 30px;
-    transition: all 0.5s ease;
-    text-decoration: none;
-    color: black;
-    font-size: 20px;
-    cursor: pointer;
-}
-.boxe-hoodie:hover{
-    background-color:rgb(156, 231, 206);
-    border-color: #2f7d6d;
-    transform: scale(1.05);
-}
-.boxe-hoodie:hover .add-be-cart{
-    opacity: 1;
-}
-/*style kafsh*/
-.boxe-kafsha{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 50px;
-    max-width: 1500px;
-    margin: 75px auto;
-}
-.boxe-kafsh{
-    border-bottom: 4px solid rgb(110, 110, 110);
-    height: 310px;
-    text-align: center;
-    max-width: 500px;
-    display: flex;
-    flex-direction:column;
-    align-items: center;
-    justify-content: center; 
-    border-radius: 30px;
-    transition: all 0.5s ease;
-    text-decoration: none;
-    color: black;
-    font-size: 20px;
-    cursor: pointer;
-}
-.boxe-kafsh:hover{
-    background-color:rgb(156, 231, 206);
-    border-color: #2f7d6d;
-    transform: scale(1.05);
-}
-.boxe-kafsh:hover .add-be-cart{
+.boxe:hover .add-be-cart{
     opacity: 1;
 }
 /*style overlay*/

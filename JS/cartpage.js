@@ -5,32 +5,11 @@ function loadCart(){
     else cart=[];
 }
 
-//item haro ba click be cart ezafe mikone
-
-function zakhireCart(){
-    localStorage.setItem("cart",JSON.stringify(cart));
-}
-
-function ezafeBeCart(idMahsol){
-    loadCart();
-    const mahsol=cart.find(p =>p.idMahsol===idMahsol);
-    if(mahsol){
-        mahsol.teedadMahsol+=1;
-    }
-    else{
-        cart.push({idMahsol: idMahsol ,teedadMahsol:1});
-    }
-
-zakhireCart();
-namayesheCart();
-}
-
 //code ro be tasvir mikeshe ba html daroni
 
 function namayesheCart(){
     loadCart();
     const container=document.getElementById("mahsolate-cart");
-    if(!container)return;
     container.innerHTML="";
     let mablagheKoll=0;
 
@@ -71,8 +50,33 @@ function namayesheCart(){
         document.getElementById("mablaghe-koll").innerText=adadFarsi(mablagheKoll)+": جمع کل "
     }
 }
+
+/*function namayeshe carto faal mikone*/
+
 if(document.getElementById("mahsolate-cart")){
 namayesheCart();}
+
+/*taghirato save mikone*/
+
+function zakhireCart(){
+    localStorage.setItem("cart",JSON.stringify(cart));
+}
+
+//item haro ba click be cart ezafe mikone
+
+function ezafeBeCart(idMahsol){
+    loadCart();
+    const mahsol=cart.find(p =>p.idMahsol===idMahsol);
+    if(mahsol){
+        mahsol.teedadMahsol+=1;
+    }
+    else{
+        cart.push({idMahsol: idMahsol ,teedadMahsol:1});
+    }
+
+zakhireCart();
+namayesheCart();
+}
 
 //kam kardan mahsol as cart
 
@@ -103,5 +107,4 @@ function hazfAzCart(idMahsol){
 function adadFarsi(number) {
     return number.toLocaleString('fa-IR');
 }
-
 namayesheCart();

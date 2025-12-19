@@ -37,7 +37,7 @@ function mohasebeCheckout(){
     return{noMaliat,maliat,mablagheNahaie};
 }
 
-    namayesheCheckout();
+namayesheCheckout();
 
 
         

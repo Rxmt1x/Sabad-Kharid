@@ -80,10 +80,9 @@ body{
     margin: 75px auto;
 }
 .boxe-Tshirt{
-    background-color: #f7f7f5;
+    border-bottom: 4px solid rgb(110, 110, 110);
     height: 310px;
     text-align: center;
-    border: 2px solid rgb(179, 179, 179);
     max-width: 500px;
     display: flex;
     flex-direction:column;
@@ -97,9 +96,8 @@ body{
     cursor: pointer;
 }
 .boxe-Tshirt:hover{
-    background-color: rgb(161, 161, 161);
-    color: rgb(240, 215, 177);
-    border-color: rgb(240, 215, 177);
+    background-color:rgb(156, 231, 206);
+    border-color: #2f7d6d;
     transform: scale(1.05);
 }
 .boxe-Tshirt:hover .add-be-cart{
@@ -114,10 +112,9 @@ body{
     margin: 75px auto;
 }
 .boxe-shalvar{
-    background-color: #f7f7f5;
+    border-bottom: 4px solid rgb(110, 110, 110);
     height: 310px;
     text-align: center;
-    border: 2px solid rgb(179, 179, 179);
     max-width: 500px;
     display: flex;
     flex-direction:column;
@@ -131,10 +128,9 @@ body{
     cursor: pointer;
 }
 .boxe-shalvar:hover{
-    background-color: rgb(161, 161, 161);
-    color: rgb(240, 215, 177);
-    border-color: rgb(240, 215, 177);
-    transform: scale(1.1);
+    background-color:rgb(156, 231, 206);
+    border-color: #2f7d6d;
+    transform: scale(1.05);
 }
 .boxe-shalvar:hover .add-be-cart{
     opacity: 1;
@@ -148,10 +144,9 @@ body{
     margin: 75px auto;
 }
 .boxe-hoodie{
-    background-color: #f7f7f5;
+    border-bottom: 4px solid rgb(110, 110, 110);
     height: 310px;
     text-align: center;
-    border: 2px solid rgb(179, 179, 179);
     max-width: 500px;
     display: flex;
     flex-direction:column;
@@ -165,10 +160,9 @@ body{
     cursor: pointer;
 }
 .boxe-hoodie:hover{
-    background-color: rgb(161, 161, 161);
-    color: rgb(240, 215, 177);
-    border-color: rgb(240, 215, 177);
-    transform: scale(1.1);
+    background-color:rgb(156, 231, 206);
+    border-color: #2f7d6d;
+    transform: scale(1.05);
 }
 .boxe-hoodie:hover .add-be-cart{
     opacity: 1;
@@ -182,10 +176,9 @@ body{
     margin: 75px auto;
 }
 .boxe-kafsh{
-    background-color: #f7f7f5;
+    border-bottom: 4px solid rgb(110, 110, 110);
     height: 310px;
     text-align: center;
-    border: 2px solid rgb(179, 179, 179);
     max-width: 500px;
     display: flex;
     flex-direction:column;
@@ -199,10 +192,9 @@ body{
     cursor: pointer;
 }
 .boxe-kafsh:hover{
-    background-color: rgb(161, 161, 161);
-    color: rgb(240, 215, 177);
-    border-color: rgb(240, 215, 177);
-    transform: scale(1.1);
+    background-color:rgb(156, 231, 206);
+    border-color: #2f7d6d;
+    transform: scale(1.05);
 }
 .boxe-kafsh:hover .add-be-cart{
     opacity: 1;
@@ -210,8 +202,7 @@ body{
 /*style overlay*/
 .add-be-cart{
     position: absolute;
-    background-color: rgba(161, 161, 161, 0.15);
-    color: rgb(206, 175, 130);
+    color: #74ccffbd;
     font-size: 25px;
     display: flex;
     align-items: center;

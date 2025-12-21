@@ -1,43 +1,43 @@
 function loadCart(){
-    const carteZakhireShode=localStorage.getItem("cart");
-    if(carteZakhireShode)cart=JSON.parse(carteZakhireShode);
+    const savedCart=localStorage.getItem("cart");
+    if(savedCart)cart=JSON.parse(savedCart);
 }
 
-function namayesheCheckout(){
-    const container=document.getElementById("itemha");
+function renderCheckout(){
+    const container=document.getElementById("items");
 
-        cart.forEach(mahsoleCart =>{
-        const mahsol= mahsolat.find(p =>p.id===mahsoleCart.idMahsol);
-        if(!mahsol)return;
+        cart.forEach(cartItem =>{
+        const item= products.find(p =>p.id===cartItem.idItem);
+        if(!item)return;
 
         const div=document.createElement("div");
         div.innerHTML=`
-        <p>${mahsol.name}x${adadFarsi(mahsoleCart.teedadMahsol)}</p>
-        <p>${adadFarsi(mahsol.price * mahsoleCart.teedadMahsol)}</p>
+        <p>${item.name}x${adadFarsi(cartItem.itemQuantity)}</p>
+        <p>${adadFarsi(item.price * cartItem.itemQuantity)}</p>
         <hr>
         `;
         container.appendChild(div);
         });
 
-        const mablagh=mohasebeCheckout();
-        document.getElementById("no-maliat").innerText=adadFarsi(mablagh.noMaliat)+": بدون مالیات";
-        document.getElementById("maliat").innerText=adadFarsi(mablagh.maliat)+": مالیات"
-        document.getElementById("mablaghe-nahaie").innerText=adadFarsi(mablagh.mablagheNahaie)+": مبلغ نهایی";
+        const mablagh=caculateCheckout();
+        document.getElementById("noTax").innerText=adadFarsi(mablagh.noTax)+": بدون مالیات";
+        document.getElementById("Tax").innerText=adadFarsi(mablagh.Tax)+": مالیات"
+        document.getElementById("finalPrice").innerText=adadFarsi(mablagh.finalPrice)+": مبلغ نهایی";
     }
 
-function mohasebeCheckout(){
-    let noMaliat=0;
-    cart.forEach(mahsoleCart =>{
-        const mahsol=mahsolat.find(p =>p.id===mahsoleCart.idMahsol);
-        if(!mahsol)return;
-        noMaliat+=mahsol.price*mahsoleCart.teedadMahsol;
+function caculateCheckout(){
+    let noTax=0;
+    cart.forEach(cartItem =>{
+        const item=products.find(p =>p.id===cartItem.idItem);
+        if(!item)return;
+        noTax+=item.price*cartItem.itemQuantity;
     });
-    const maliat=noMaliat*0.1;
-    const mablagheNahaie=noMaliat+maliat;
-    return{noMaliat,maliat,mablagheNahaie};
+    const Tax=noTax*0.1;
+    const finalPrice=noTax+Tax;
+    return{noTax,Tax,finalPrice};
 }
 
-namayesheCheckout();
+renderCheckout();
 
 
         

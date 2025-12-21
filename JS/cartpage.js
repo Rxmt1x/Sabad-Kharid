@@ -1,38 +1,38 @@
 let cart=[];
 function loadCart(){
-    const carteZakhireShode=localStorage.getItem("cart");
-    if(carteZakhireShode)cart=JSON.parse(carteZakhireShode);
+    const savedCart=localStorage.getItem("cart");
+    if(savedCart)cart=JSON.parse(savedCart);
     else cart=[];
 }
 
 //code ro be tasvir mikeshe ba html daroni
 
-function namayesheCart(){
+function renderCart(){
     loadCart();
-    const container=document.getElementById("mahsolate-cart");
+    const container=document.getElementById("cartItems");
     container.innerHTML="";
-    let mablagheKoll=0;
+    let overallPrice=0;
 
-    cart.forEach(mahsoleCart =>{
-        const mahsol= mahsolat.find(p =>p.id===mahsoleCart.idMahsol);
-        if(!mahsol)return;
-        const kolleMahsolat=mahsol.price*mahsoleCart.teedadMahsol;
-        mablagheKoll+=kolleMahsolat;
+    cart.forEach(cartItem =>{
+        const item= products.find(p =>p.id===cartItem.idItem);
+        if(!item)return;
+        const totalItems=item.price*cartItem.itemQuantity;
+        overallPrice+=totalItems;
 
         const div=document.createElement("div");
-        div.classList.add("sabad-info");
+        div.classList.add("cartInfo");
         div.innerHTML= `
-        <img src="${mahsol.image}"class="akse-mahsolat">
+        <img src="${item.image}"class="itemImage">
         <div class="info">
-        <h4>${mahsol.name}</h4>
-        قیمت واحد:<p>${adadFarsi(mahsol.price)}</p>
-        تعداد:<p>${adadFarsi(mahsoleCart.teedadMahsol)}</p>  
-        قیمت کل: <p>${adadFarsi(kolleMahsolat)}</p>
+        <h4>${item.name}</h4>
+        قیمت واحد:<p>${adadFarsi(item.price)}</p>
+        تعداد:<p>${adadFarsi(cartItem.itemQuantity)}</p>  
+        قیمت کل: <p>${adadFarsi(totalItems)}</p>
         </div>
-        <div class="boxe-button">
-        <button onclick="ezafeBeCart(${mahsol.id})">+</button>
-        <button onclick="kamKardanAzCart(${mahsol.id})">-</button>
-        <button onclick="hazfAzCart(${mahsol.id})">x</button>
+        <div class="buttonBox">
+        <button onclick="addToCart(${item.id})">+</button>
+        <button onclick="decrease{(${item.id})">-</button>
+        <button onclick="deleteFromCart(${item.id})">x</button>
         </div>
         <hr>
     `;
@@ -40,65 +40,65 @@ function namayesheCart(){
     });
 
     if(cart.length===0){
-        document.querySelector(".tasvie").style.display="none";
-        document.querySelector(".chidemane-cart").style.justifyContent="center";
-        document.getElementById("sabade-khali").style.display="flex";
+        document.querySelector(".payment").style.display="none";
+        document.querySelector(".cartLayout").style.justifyContent="center";
+        document.getElementById("eamptyCart").style.display="flex";
     }
     else{
-        document.querySelector(".tasvie").style.display="flex";
-        document.getElementById("sabade-khali").style.display="none"
-        document.getElementById("mablaghe-koll").innerText=adadFarsi(mablagheKoll)+": جمع کل "
+        document.querySelector(".payment").style.display="flex";
+        document.getElementById("eamptyCart").style.display="none"
+        document.getElementById("overallPrice").innerText=adadFarsi(overallPrice)+": جمع کل "
     }
 }
 
 /*function namayeshe carto faal mikone*/
 
-if(document.getElementById("mahsolate-cart")){
-namayesheCart();}
+if(document.getElementById("cartItems")){
+renderCart();}
 
 /*taghirato save mikone*/
 
-function zakhireCart(){
+function saveCart(){
     localStorage.setItem("cart",JSON.stringify(cart));
 }
 
 //item haro ba click be cart ezafe mikone
 
-function ezafeBeCart(idMahsol){
+function addToCart(idItem){
     loadCart();
-    const mahsol=cart.find(p =>p.idMahsol===idMahsol);
-    if(mahsol){
-        mahsol.teedadMahsol+=1;
+    const item=cart.find(p =>p.idItem===idItem);
+    if(item){
+        item.itemQuantity+=1;
     }
     else{
-        cart.push({idMahsol: idMahsol ,teedadMahsol:1});
+        cart.push({idItem: idItem ,itemQuantity:1});
     }
 
-zakhireCart();
-namayesheCart();
+saveCart();
+renderCart();
 }
 
 //kam kardan mahsol as cart
 
-function kamKardanAzCart(idMahsol){
-    const mahsol=cart.find(p =>p.idMahsol===idMahsol);
-    if(!mahsol)return;
-    mahsol.teedadMahsol-=1;
+function decrease(idItem){
+    const item=cart.find(p =>p.idItem===idItem);
+    if(!item)return;
+    item.itemQuantity-=1;
 
-    if(mahsol.teedadMahsol<=0){
-        cart=cart.filter(p =>p.idMahsol!==idMahsol);
+    if(item.itemQuantity<=0){
+        cart=cart.filter(p =>p.idItem!==idItem);
     }
-    zakhireCart();
-    namayesheCart();
+    saveCart();
+    renderCart();
     loadCart();
 }
 
 //hazf kardan mahsole az cart
 
-function hazfAzCart(idMahsol){
-    cart=cart.filter(p =>p.idMahsol!==idMahsol);
-    zakhireCart();
-    namayesheCart();
+function deleteFromCart(idItem){
+    cart=cart.filter(p =>p.idItem!==idItem);
+    saveCart();
+    renderCart();
     loadCart();
 }
 
@@ -107,4 +107,4 @@ function hazfAzCart(idMahsol){
 function adadFarsi(number) {
     return number.toLocaleString('fa-IR');
 }
-namayesheCart();
+renderCart();

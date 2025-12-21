@@ -25,14 +25,14 @@ body{
     font-size: 15px;
 }
 /*style index*/
-.boxe-lebasha{
+.clothingBox{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     gap: 50px;
     max-width: 500px;
     margin: 50px auto;
 }
-.boxe-lebas{
+.clothingBoxOf{
     background-color:#2f7d6d;
     height: 200px;
     text-align: center;
@@ -48,7 +48,7 @@ body{
     color: white;
     font-size: 20px;
 }
-.boxe-lebas:hover{
+.clothingBoxOf:hover{
     background-color: rgb(156, 231, 206);
     color: rgb(110, 110, 110);
     border-color:rgb(110, 110, 110);
@@ -119,15 +119,15 @@ body{
     border-radius: 30px;
 }
 /*style cart*/
-.chidemane-cart{
+.cartLayout{
     display:flex;
     gap: 25px;
     padding:25px;
 }
-.liste-mahsolat{
+.itemsList{
     flex: 3;
 }
-.tasvie{
+.payment{
     flex:1;
     border: 2px solid rgb(179, 179, 179);
     padding: 15px;
@@ -141,14 +141,14 @@ body{
     margin-left: 100px;
     margin-top: 50px;
 }
-.sabad-info{
+.cartInfo{
     display: flex;
     align-items: center;
     padding: 10px;
     margin-bottom: 20px;
     border-radius: 20px;
 }
-.akse-mahsolat{
+.itemImage{
     width: 200px;
     height: 200px;
     border-radius: 20px;
@@ -158,7 +158,7 @@ body{
 .info{
     flex:1;
 }
-.boxe-button{
+.buttonBox{
     display: flex;
     align-items: center;
     border:2px solid rgb(179, 179, 179);
@@ -166,14 +166,14 @@ body{
     border-radius: 10px;
     margin-left: 350px;
 }
-.boxe-button button{
+.buttonBox button{
     border: none;
     padding: 8px 18px;
     cursor: pointer;
     font-size: 18px;
     background-color: whitesmoke;
 }
-.sorat-hesab-btn{
+.check-btn{
     display: block;
     text-decoration: none;
     background-color:  #2f7d6d;
@@ -184,7 +184,7 @@ body{
     text-align: center;
     margin-top: 10px;
 }
-.sorat-hesab-btn:hover{
+.check-btn:hover{
     background-color: rgb(156, 231, 206);
     transform: scale(1.05);
     color: rgb(110, 110, 110);

@@ -1,4 +1,4 @@
-let mahsolat = [
+let products = [
 {
     id:1,
     name: " تیشرت مشکی",

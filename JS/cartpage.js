@@ -11,28 +11,28 @@ function renderCart(){
     loadCart();
     const container=document.getElementById("cartItems");
     container.innerHTML="";
-    let overallPrice=0;
+    let totalPrice=0;
 
-    cart.forEach(cartItem =>{
-        const item= products.find(p =>p.id===cartItem.idItem);
-        if(!item)return;
-        const totalItems=item.price*cartItem.itemQuantity;
-        overallPrice+=totalItems;
+    cart.forEach(cartItems =>{
+        const product= products.find(p =>p.id===cartItems.productId);
+        if(!product)return;
+        const fullPrice=product.price*cartItems.quantity;
+        totalPrice+=fullPrice;
 
         const div=document.createElement("div");
         div.classList.add("cartInfo");
         div.innerHTML= `
-        <img src="${item.image}"class="itemImage">
+        <img src="${product.image}"class="image">
         <div class="info">
-        <h4>${item.name}</h4>
-        قیمت واحد:<p>${adadFarsi(item.price)}</p>
-        تعداد:<p>${adadFarsi(cartItem.itemQuantity)}</p>  
-        قیمت کل: <p>${adadFarsi(totalItems)}</p>
+        <h4>${product.name}</h4>
+        قیمت واحد:<p>${numbers(product.price)}</p>
+        تعداد:<p>${numbers(cartItems.quantity)}</p>  
+        قیمت کل: <p>${numbers(fullPrice)}</p>
         </div>
-        <div class="buttonBox">
-        <button onclick="addToCart(${item.id})">+</button>
-        <button onclick="decrease{(${item.id})">-</button>
-        <button onclick="deleteFromCart(${item.id})">x</button>
+        <div class="btnBox">
+        <button onclick="add(${product.id})">+</button>
+        <button onclick="decrease(${product.id})">-</button>
+        <button onclick="remove(${product.id})">x</button>
         </div>
         <hr>
     `;
@@ -40,14 +40,14 @@ function renderCart(){
     });
 
     if(cart.length===0){
-        document.querySelector(".payment").style.display="none";
-        document.querySelector(".cartLayout").style.justifyContent="center";
-        document.getElementById("eamptyCart").style.display="flex";
+        document.querySelector(".payout").style.display="none";
+        document.querySelector(".cart").style.justifyContent="center";
+        document.getElementById("empty").style.display="flex";
     }
     else{
-        document.querySelector(".payment").style.display="flex";
-        document.getElementById("eamptyCart").style.display="none"
-        document.getElementById("overallPrice").innerText=adadFarsi(overallPrice)+": جمع کل "
+        document.querySelector(".payout").style.display="flex";
+        document.getElementById("empty").style.display="none"
+        document.getElementById("price").innerText=numbers(totalPrice)+": جمع کل "
     }
 }
 
@@ -64,14 +64,14 @@ function saveCart(){
 
 //item haro ba click be cart ezafe mikone
 
-function addToCart(idItem){
+function add(productId){
     loadCart();
-    const item=cart.find(p =>p.idItem===idItem);
-    if(item){
-        item.itemQuantity+=1;
+    const product=cart.find(p =>p.productId===productId);
+    if(product){
+        product.quantity+=1;
     }
     else{
-        cart.push({idItem: idItem ,itemQuantity:1});
+        cart.push({productId: productId ,quantity:1});
     }
 
 saveCart();
@@ -80,31 +80,30 @@ renderCart();
 
 //kam kardan mahsol as cart
 
-function decrease(idItem){
-    const item=cart.find(p =>p.idItem===idItem);
-    if(!item)return;
-    item.itemQuantity-=1;
+function decrease(productId){
+    const product=cart.find(p =>p.productId===productId);
+    if(!product)return;
+    product.quantity-=1;
 
-    if(item.itemQuantity<=0){
-        cart=cart.filter(p =>p.idItem!==idItem);
+    if(product.quantity<=0){
+        cart=cart.filter(p =>p.productId!==productId);
     }
     saveCart();
     renderCart();
-    loadCart();
 }
 
 //hazf kardan mahsole az cart
 
-function deleteFromCart(idItem){
-    cart=cart.filter(p =>p.idItem!==idItem);
+function remove(productId){
+    cart=cart.filter(p =>p.productId!==productId);
     saveCart();
     renderCart();
-    loadCart();
 }
 
 //farsi kardane adad
 
-function adadFarsi(number) {
+function numbers(number) {
     return number.toLocaleString('fa-IR');
 }
+
 renderCart();

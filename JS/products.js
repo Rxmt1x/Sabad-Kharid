@@ -6,7 +6,7 @@ let products = [
     image: "../Images/T shirt/black T.jpg",
     color:"black",
     size:["M","L","XL"],
-    stock:{ M:4,L:2,XL:3 },
+    quantity:7,
     category:"tshirt",
 },
 
@@ -17,7 +17,7 @@ let products = [
     image: "../Images/T shirt/white T.jpg",
     color:"white",
     size:["M","L","XL"],
-    stock:{ M:6,L:1,XL:4 },
+    quantity:8,
     category:"tshirt",
 },
 
@@ -28,7 +28,7 @@ let products = [
     image: "../Images/T shirt/blue T.avif",
     color:"blue",
     size:["M","XL"],
-    stock:{ M:0,XL:3 },
+    quantity:2,
     category:"tshirt",
 },
 
@@ -39,7 +39,7 @@ let products = [
     image: "../Images/T shirt/black T5.avif",
     color:"black",
     size:["L","XL"],
-    stock:{ L:5,XL:2 },
+    quantity:3,
     category:"tshirt",
 },
 
@@ -50,7 +50,7 @@ let products = [
     image: "../Images/pants/blue jeans.webp",
     color:"blue",
     size:["S","M","L","XL"],
-    stock:{ S:3,M:4,L:0,XL:2 },
+    quantity:7,
     category:"pants",
 },
 
@@ -61,7 +61,7 @@ let products = [
     image: "../Images/pants/gray pants.jpg",
     color:"gray",
     size:["L"],
-    stock:{ L:1 },
+    quantity:6,
     category:"pants",
 },
 
@@ -72,7 +72,7 @@ let products = [
     image: "../Images/pants/black pants.webp",
     color:"black",
     size:["M","L"],
-    stock:{ M:6,L:4, },
+    quantity:7,
     category:"pants",
 },
 
@@ -83,7 +83,7 @@ let products = [
     image: "../Images/hoodie/black hoodie.webp",
     color:"black",
     size:["M","L","XL"],
-    stock:{ M:11,L:4,XL:6 },
+    quantity:7,
     category:"hoodie",
 },
 
@@ -94,7 +94,7 @@ let products = [
     image: "../Images/hoodie/white hoodie.webp",
     color:"white",
     size:["M","XL"],
-    stock:{ M:5,XL:3 },
+    quantity:5,
     category:"hoodie",
 
 },
@@ -106,7 +106,7 @@ let products = [
     image: "../Images/hoodie/gray hoodie.webp",
     color:"gray",
     size:["L","XL"],
-    stock:{ L:1,XL:4 },
+    quantity:4,
     category:"hoodie",
 },
 
@@ -117,7 +117,7 @@ let products = [
     image: "../Images/hoodie/green hoodie.jpg",
     color:"green",
     size:["M","L","XL"],
-    stock:{ M:11,L:12,XL:8 },
+    quantity:12,
     category:"hoodie",
 },
 
@@ -128,7 +128,7 @@ let products = [
     image: "../Images/shoes/black leather boots.webp",
     color:"black",
     size:["L","XL"],
-    stock:{ L:2,XL:1 },
+    quantity:9,
     category:"shoes",
 },
 
@@ -139,7 +139,7 @@ let products = [
     image: "../Images/shoes/black Js.avif",
     color:"black",
     size:["S","M","L"],
-    stock:{ S:0,M:1,L:2 },
+    quantity:8,
     category:"shoes",
 },
 
@@ -150,7 +150,7 @@ let products = [
     image: "../Images/shoes/white Js.webp",
     color:"white",
     size:["S","M","L","XL"],
-    stock:{ S:2,M:4,L:3,XL:0 },
+    quantity:7,
     category:"shoes",
 },
 
@@ -161,7 +161,7 @@ let products = [
     image: "../Images/T shirt/black T2.webp",
     color:"black",
     size:["M","L","XL"],
-    stock:{ M:4,L:2,XL:2 },
+    quantity:7,
     category:"tshirt",
 },
 
@@ -172,7 +172,7 @@ let products = [
     image: "../Images/T shirt/black T3.jpeg",
     color:"black",
     size:["M","L","XL"],
-    stock:{ M:0,L:1,XL:2 },
+    quantity:5,
     category:"tshirt",
 },
 
@@ -183,7 +183,7 @@ let products = [
     image: "../Images/T shirt/black T4.jpg",
     color:"black",
     size:["M","L","XL"],
-    stock:{ M:4,L:1,XL:6 },
+    quantity:4,
     category:"tshirt",
 },
 
@@ -194,7 +194,7 @@ let products = [
     image: "../Images/T shirt/white T2.jpg",
     color:"white",
     size:["M","L","XL"],
-    stock:{ M:3,L:3,XL:3 },
+    quantity:5,
     category:"tshirt",
 },
 
@@ -205,7 +205,7 @@ let products = [
     image: "../Images/T shirt/white T3.jpg",
     color:"white",
     size:["L","XL"],
-    stock:{ L:1,XL:5 },
+    quantity:10,
     category:"tshirt",
 },
 
@@ -216,7 +216,7 @@ let products = [
     image: "../Images/T shirt/white T4.jpg",
     color:"white",
     size:["M","L","XL"],
-    stock:{ M:0,L:0,XL:1 },
+    quantity:7,
     category:"tshirt",
 },
 
@@ -227,7 +227,7 @@ let products = [
     image: "../Images/T shirt/gray T.jpg",
     color:"gray",
     size:["M","L","XL"],
-    stock:{ M:10,L:11,XL:20 },
+    quantity:7,
     category:"tshirt",
 },
 
@@ -238,7 +238,7 @@ let products = [
     image: "../Images/T shirt/gray T2.jpg",
     color:"gray",
     size:["M","L","XL"],
-    stock:{ M:8,L:10,XL:12 },
+    quantity:7,
     category:"tshirt",
 },
 
@@ -249,7 +249,7 @@ let products = [
     image: "../Images/T shirt/gray T3.jpg",
     color:"gray",
     size:["M","L","XL"],
-    stock:{ M:8,L:11,XL:21 },
+    quantity:6,
     category:"tshirt",
 },
 
@@ -260,7 +260,7 @@ let products = [
     image: "../Images/T shirt/blue T2.png",
     color:"blue",
     size:["M","L"],
-    stock:{ M:8,L:8, },
+    quantity:5,
     category:"tshirt",
 },
 
@@ -271,7 +271,7 @@ let products = [
     image: "../Images/T shirt/blue T3.jpg",
     color:"blue",
     size:["M","L","XL"],
-    stock:{ M:11,L:12,XL:13 },
+    quantity:15,
     category:"tshirt",
 },
 
@@ -282,7 +282,7 @@ let products = [
     image: "../Images/pants/black pants2.webp",
     color:"black",
     size:["S","M","L"],
-    stock:{ S:2,M:5,L:6 },
+    quantity:2,
     category:"pants",
 },
 
@@ -293,7 +293,7 @@ let products = [
     image: "../Images/pants/black pants3.jpeg",
     color:"black",
     size:["S","M","L"],
-    stock:{ S:1,M:0,L:4 },
+    quantity:8,
     category:"pants",
     
 },
@@ -305,7 +305,7 @@ let products = [
     image: "../Images/pants/gray pants2.jpg",
     color:"gray",
     size:["L","XL"],
-    stock:{ L:1,XL:4 },
+    quantity:7,
     category:"pants",
 },
 
@@ -316,7 +316,7 @@ let products = [
     image: "../Images/pants/gray pants3.webp",
     color:"gray",
     size:["M","L"],
-    stock:{ M:0,L:6 },
+    quantity:6,
     category:"pants",
 },
 
@@ -327,7 +327,7 @@ let products = [
     image: "../Images/pants/blue jeans2.jpg",
     color:"blue",
     size:["S","M","XL",],
-    stock:{ S:0,M:1,XL:2 },
+    quantity:5,
     category:"pants",
 },
 
@@ -338,7 +338,7 @@ let products = [
     image: "../Images/pants/blue jeans 3.webp",
     color:"blue",
     size:["S","M","L"],
-    stock:{ S:4,M:4,L:3 },
+    quantity:6,
     category:"pants",
 },
 
@@ -349,7 +349,7 @@ let products = [
     image: "../Images/hoodie/black hoodie2.jpeg",
     color:"black",
     size:["S","M","L","XL"],
-    stock:{ S:3,M:0,L:11,XL:12 },
+    quantity:7,
     category:"hoodie",
 },
 
@@ -360,7 +360,7 @@ let products = [
     image: "../Images/hoodie/black hoodie3.jpg",
     color:"black",
     size:["S","M","L","XL"],
-    stock:{ S:4,M:5,L:7,XL:9 },
+    quantity:3,
     category:"hoodie",
 },
 
@@ -371,7 +371,7 @@ let products = [
     image: "../Images/hoodie/black hoodie4.jpeg",
     color:"black",
     size:["S","M","XL"],
-    stock:{ S:1,M:0,XL:4 },
+    quantity:11,
     category:"hoodie",
 },
 
@@ -382,7 +382,7 @@ let products = [
     image: "../Images/hoodie/white hoodie2.webp",
     color:"white",
     size:["L","XL"],
-    stock:{ L:1,XL:2 },
+    quantity:9,
     category:"hoodie",
 },
 
@@ -393,7 +393,7 @@ let products = [
     image: "../Images/hoodie/white hoodie3.jpg",
     color:"white",
     size:["M","L","XL"],
-    stock:{ M:10,L:3,XL:7 },
+    quantity:6,
     category:"hoodie",
 },
 
@@ -404,7 +404,7 @@ let products = [
     image: "../Images/hoodie/white hoodie4.jpg",
     color:"white",
     size:["S","L","XL"],
-    stock:{ S:2,L:0,XL:2 },
+    quantity:1,
     category:"hoodie",
 },
 
@@ -415,7 +415,7 @@ let products = [
     image: "../Images/hoodie/gray hoodie2.jpeg",
     color:"gray",
     size:["S","M","L","XL"],
-    stock:{ S:4,M:0,L:1,XL:2 },
+    quantity:3,
     category:"hoodie",
 },
 
@@ -426,7 +426,7 @@ let products = [
     image: "../Images/hoodie/gray hoodie3.jpg",
     color:"gray",
     size:["S","M","L","XL"],
-    stock:{ S:5,M:2,L:0,XL:12 },
+    quantity:2,
     category:"hoodie",
 },
 
@@ -437,7 +437,7 @@ let products = [
     image: "../Images/hoodie/green hoodie2.jpg",
     color:"green",
     size:["S","M","L","XL"],
-    stock:{ S:4,M:10,L:1,XL:4 },
+    quantity:10,
     category:"hoodie",
 },
 
@@ -448,7 +448,7 @@ let products = [
     image: "../Images/hoodie/green hoodie3.jpg",
     color:"green",
     size:["S","M","L",],
-    stock:{ S:5,M:5,L:5 },
+    quantity:7,
     category:"hoodie",
 },
 
@@ -459,7 +459,7 @@ let products = [
     image: "../Images/hoodie/green hoodie4.jpeg",
     color:"green",
     size:["S","M","L","XL"],
-    stock:{ S:4,M:0,L:4,XL:7 },
+    quantity:7,
     category:"hoodie",
 },
 
@@ -470,7 +470,7 @@ let products = [
     image: "../Images/shoes/white leather boot.jpg",
     color:"white",
     size:["M","L"],
-    stock:{ M:3,L:1 },
+    quantity:1,
     category:"shoes",
 },
 
@@ -481,7 +481,7 @@ let products = [
     image: "../Images/shoes/white Js2.jpg",
     color:"white",
     size:["M","L","XL"],
-    stock:{ M:1,L:1,XL:3 },
+    quantity:3,
     category:"shoes",
 },
 
@@ -492,7 +492,7 @@ let products = [
     image: "../Images/shoes/white Js3.png",
     color:"white",
     size:["S","M","L"],
-    stock:{ S:0,M:2,L:3 },
+    quantity:4,
     category:"shoes",
 },
 
@@ -503,7 +503,7 @@ let products = [
     image: "../Images/shoes/black Js2.jpg",
     color:"black",
     size:["S","M","L","XL"],
-    stock:{ S:4,M:2,L:5,XL:3 },
+    quantity:2,
     category:"shoes",
 },
 
@@ -514,7 +514,7 @@ let products = [
     image: "../Images/shoes/black Js3.jpg",
     color:"black",
     size:["S","L","XL"],
-    stock:{ S:1,L:2,XL:2 },
+    quantity:3,
     category:"shoes",
 },
 
@@ -525,7 +525,7 @@ let products = [
     image: "../Images/shoes/black Js4.jpg",
     color:"black",
     size:["M","L","XL"],
-    stock:{ M:2,L:5,XL:3 },
+    quantity:5,
     category:"shoes",
 },
 
@@ -536,7 +536,7 @@ let products = [
     image: "../Images/shoes/white Js4.avif",
     color:"white",
     size:["M","L","XL"],
-    stock:{ M:1,L:2,XL:0 },
+    quantity:6,
     category:"shoes",
 },
 ];

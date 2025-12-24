@@ -30,9 +30,9 @@ function renderCart(){
         قیمت کل: <p>${numbers(fullPrice)}</p>
         </div>
         <div class="btnBox">
-        <button onclick="add(${product.id})">+</button>
-        <button onclick="decrease(${product.id})">-</button>
-        <button onclick="remove(${product.id})">x</button>
+        <button onclick="add(${product.id}, '${cartItems.size}')">+</button>
+        <button onclick="decrease(${product.id}, '${cartItems.size}')">-</button>
+        <button onclick="remove(${product.id}, '${cartItems.size}')">x</button>
         </div>
         <hr>
     `;
@@ -71,21 +71,22 @@ function add(productId, size) {
   if (!product) return;
 
   const inStock = product.stock[size];
-  const qty = Stock(productId, size);
 
-  if (qty >= inStockStock) {
+  const cartItem = cart.find(
+    p => p.productId === productId && p.size === size
+  );
+
+  const currentQty = cartItem ? cartItem.quantity : 0;
+
+  if (currentQty >= inStock) {
     alert("موجودی این سایز تمام شده");
     return;
   }
 
-  const product = cart.find(
-    p => p.productId === productId && p.size === size
-  );
-
-  if (product) {
-    product.stock += 1;
+  if (cartItem) {
+    cartItem.quantity += 1;
   } else {
-    cart.push({ productId, size, stock: 1 });
+    cart.push({ productId, size, quantity: 1 });
   }
 
   saveCart();
@@ -93,34 +94,38 @@ function add(productId, size) {
 }
 
 
+
 //kam kardan mahsol as cart
 
-function decrease(productId){
-    const product=cart.find(p =>p.productId===productId);
-    if(!product)return;
-    product.quantity-=1;
+function decrease(productId, size) {
+  const item = cart.find(
+    p => p.productId === productId && p.size === size
+  );
+  if (!item) return;
 
-    if(product.quantity<=0){
-        cart=cart.filter(p =>p.productId!==productId);
-    }
-    saveCart();
-    renderCart();
+  item.quantity -= 1;
+
+  if (item.quantity <= 0) {
+    cart = cart.filter(
+      p => !(p.productId === productId && p.size === size)
+    );
+  }
+
+  saveCart();
+  renderCart();
 }
+
 
 //hazf kardan mahsole az cart
 
-function remove(productId){
-    cart=cart.filter(p =>p.productId!==productId);
-    saveCart();
-    renderCart();
+function remove(productId, size) {
+  cart = cart.filter(
+    p => !(p.productId === productId && p.size === size)
+  );
+  saveCart();
+  renderCart();
 }
 
-//gereftane tedade mahsole dar stock
-
-function Stock(productId,size){
-    const product=cart.find(p =>p.productId===productId&&p.size===size);
-    return product?product.stock:0;
-}
 
 //farsi kardane adad
 

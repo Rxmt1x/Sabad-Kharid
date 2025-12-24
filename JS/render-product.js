@@ -11,10 +11,10 @@ function renderProducts(category) {
     div.className = "box";
 
     const sizesHTML = product.size
-      .filter(s => product.stock[s] > 0)
-      .map(s => `
-        <button class="size-btn" data-size="${s}">
-          ${s}
+      .filter(q => product.quantity[q] > 0)
+      .map(q => `
+        <button class="size-btn" data-size="${q}">
+          ${q}
         </button>
       `)
       .join("");

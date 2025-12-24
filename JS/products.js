@@ -7,6 +7,7 @@ let products = [
     color:"black",
     size:["M","L","XL"],
     stock:{ M:4,L:2,XL:3 },
+    category:"tshirt",
 },
 
 {
@@ -17,6 +18,7 @@ let products = [
     color:"white",
     size:["M","L","XL"],
     stock:{ M:6,L:1,XL:4 },
+    category:"tshirt",
 },
 
 {
@@ -27,6 +29,7 @@ let products = [
     color:"blue",
     size:["M","XL"],
     stock:{ M:0,XL:3 },
+    category:"tshirt",
 },
 
 {
@@ -37,6 +40,7 @@ let products = [
     color:"black",
     size:["L","XL"],
     stock:{ L:5,XL:2 },
+    category:"tshirt",
 },
 
 {
@@ -47,6 +51,7 @@ let products = [
     color:"blue",
     size:["S","M","L","XL"],
     stock:{ S:3,M:4,L:0,XL:2 },
+    category:"pants",
 },
 
 {
@@ -57,6 +62,7 @@ let products = [
     color:"gray",
     size:["L"],
     stock:{ L:1 },
+    category:"pants",
 },
 
 {
@@ -67,6 +73,7 @@ let products = [
     color:"black",
     size:["M","L"],
     stock:{ M:6,L:4, },
+    category:"pants",
 },
 
 {
@@ -77,6 +84,7 @@ let products = [
     color:"black",
     size:["M","L","XL"],
     stock:{ M:11,L:4,XL:6 },
+    category:"hoodie",
 },
 
 {
@@ -87,6 +95,8 @@ let products = [
     color:"white",
     size:["M","XL"],
     stock:{ M:5,XL:3 },
+    category:"hoodie",
+
 },
 
 {
@@ -97,6 +107,7 @@ let products = [
     color:"gray",
     size:["L","XL"],
     stock:{ L:1,XL:4 },
+    category:"hoodie",
 },
 
 {
@@ -107,6 +118,7 @@ let products = [
     color:"green",
     size:["M","L","XL"],
     stock:{ M:11,L:12,XL:8 },
+    category:"hoodie",
 },
 
 {
@@ -117,6 +129,7 @@ let products = [
     color:"black",
     size:["L","XL"],
     stock:{ L:2,XL:1 },
+    category:"shoes",
 },
 
 {
@@ -127,6 +140,7 @@ let products = [
     color:"black",
     size:["S","M","L"],
     stock:{ S:0,M:1,L:2 },
+    category:"shoes",
 },
 
 {
@@ -137,6 +151,7 @@ let products = [
     color:"white",
     size:["S","M","L","XL"],
     stock:{ S:2,M:4,L:3,XL:0 },
+    category:"shoes",
 },
 
 {
@@ -147,6 +162,7 @@ let products = [
     color:"black",
     size:["M","L","XL"],
     stock:{ M:4,L:2,XL:2 },
+    category:"tshirt",
 },
 
 {
@@ -157,6 +173,7 @@ let products = [
     color:"black",
     size:["M","L","XL"],
     stock:{ M:0,L:1,XL:2 },
+    category:"tshirt",
 },
 
 {
@@ -167,6 +184,7 @@ let products = [
     color:"black",
     size:["M","L","XL"],
     stock:{ M:4,L:1,XL:6 },
+    category:"tshirt",
 },
 
 {
@@ -177,6 +195,7 @@ let products = [
     color:"white",
     size:["M","L","XL"],
     stock:{ M:3,L:3,XL:3 },
+    category:"tshirt",
 },
 
 {
@@ -187,6 +206,7 @@ let products = [
     color:"white",
     size:["L","XL"],
     stock:{ L:1,XL:5 },
+    category:"tshirt",
 },
 
 {
@@ -197,6 +217,7 @@ let products = [
     color:"white",
     size:["M","L","XL"],
     stock:{ M:0,L:0,XL:1 },
+    category:"tshirt",
 },
 
 {
@@ -207,6 +228,7 @@ let products = [
     color:"gray",
     size:["M","L","XL"],
     stock:{ M:10,L:11,XL:20 },
+    category:"tshirt",
 },
 
 {
@@ -217,6 +239,7 @@ let products = [
     color:"gray",
     size:["M","L","XL"],
     stock:{ M:8,L:10,XL:12 },
+    category:"tshirt",
 },
 
 {
@@ -227,6 +250,7 @@ let products = [
     color:"gray",
     size:["M","L","XL"],
     stock:{ M:8,L:11,XL:21 },
+    category:"tshirt",
 },
 
 {
@@ -237,6 +261,7 @@ let products = [
     color:"blue",
     size:["M","L"],
     stock:{ M:8,L:8, },
+    category:"tshirt",
 },
 
 {
@@ -247,6 +272,7 @@ let products = [
     color:"blue",
     size:["M","L","XL"],
     stock:{ M:11,L:12,XL:13 },
+    category:"tshirt",
 },
 
 {
@@ -257,6 +283,7 @@ let products = [
     color:"black",
     size:["S","M","L"],
     stock:{ S:2,M:5,L:6 },
+    category:"pants",
 },
 
 {
@@ -267,6 +294,8 @@ let products = [
     color:"black",
     size:["S","M","L"],
     stock:{ S:1,M:0,L:4 },
+    category:"pants",
+    
 },
 
 {
@@ -277,6 +306,7 @@ let products = [
     color:"gray",
     size:["L","XL"],
     stock:{ L:1,XL:4 },
+    category:"pants",
 },
 
 {
@@ -287,6 +317,7 @@ let products = [
     color:"gray",
     size:["M","L"],
     stock:{ M:0,L:6 },
+    category:"pants",
 },
 
 {
@@ -297,6 +328,7 @@ let products = [
     color:"blue",
     size:["S","M","XL",],
     stock:{ S:0,M:1,XL:2 },
+    category:"pants",
 },
 
 {
@@ -307,6 +339,7 @@ let products = [
     color:"blue",
     size:["S","M","L"],
     stock:{ S:4,M:4,L:3 },
+    category:"pants",
 },
 
 {
@@ -317,6 +350,7 @@ let products = [
     color:"black",
     size:["S","M","L","XL"],
     stock:{ S:3,M:0,L:11,XL:12 },
+    category:"hoodie",
 },
 
 {
@@ -327,6 +361,7 @@ let products = [
     color:"black",
     size:["S","M","L","XL"],
     stock:{ S:4,M:5,L:7,XL:9 },
+    category:"hoodie",
 },
 
 {
@@ -337,6 +372,7 @@ let products = [
     color:"black",
     size:["S","M","XL"],
     stock:{ S:1,M:0,XL:4 },
+    category:"hoodie",
 },
 
 {
@@ -347,6 +383,7 @@ let products = [
     color:"white",
     size:["L","XL"],
     stock:{ L:1,XL:2 },
+    category:"hoodie",
 },
 
 {
@@ -357,6 +394,7 @@ let products = [
     color:"white",
     size:["M","L","XL"],
     stock:{ M:10,L:3,XL:7 },
+    category:"hoodie",
 },
 
 {
@@ -367,6 +405,7 @@ let products = [
     color:"white",
     size:["S","L","XL"],
     stock:{ S:2,L:0,XL:2 },
+    category:"hoodie",
 },
 
 {
@@ -377,6 +416,7 @@ let products = [
     color:"gray",
     size:["S","M","L","XL"],
     stock:{ S:4,M:0,L:1,XL:2 },
+    category:"hoodie",
 },
 
 {
@@ -387,6 +427,7 @@ let products = [
     color:"gray",
     size:["S","M","L","XL"],
     stock:{ S:5,M:2,L:0,XL:12 },
+    category:"hoodie",
 },
 
 {
@@ -397,6 +438,7 @@ let products = [
     color:"green",
     size:["S","M","L","XL"],
     stock:{ S:4,M:10,L:1,XL:4 },
+    category:"hoodie",
 },
 
 {
@@ -407,6 +449,7 @@ let products = [
     color:"green",
     size:["S","M","L",],
     stock:{ S:5,M:5,L:5 },
+    category:"hoodie",
 },
 
 {
@@ -417,6 +460,7 @@ let products = [
     color:"green",
     size:["S","M","L","XL"],
     stock:{ S:4,M:0,L:4,XL:7 },
+    category:"hoodie",
 },
 
 {
@@ -427,6 +471,7 @@ let products = [
     color:"white",
     size:["M","L"],
     stock:{ M:3,L:1 },
+    category:"shoes",
 },
 
 {
@@ -437,6 +482,7 @@ let products = [
     color:"white",
     size:["M","L","XL"],
     stock:{ M:1,L:1,XL:3 },
+    category:"shoes",
 },
 
 {
@@ -447,6 +493,7 @@ let products = [
     color:"white",
     size:["S","M","L"],
     stock:{ S:0,M:2,L:3 },
+    category:"shoes",
 },
 
 {
@@ -457,6 +504,7 @@ let products = [
     color:"black",
     size:["S","M","L","XL"],
     stock:{ S:4,M:2,L:5,XL:3 },
+    category:"shoes",
 },
 
 {
@@ -467,6 +515,7 @@ let products = [
     color:"black",
     size:["S","L","XL"],
     stock:{ S:1,L:2,XL:2 },
+    category:"shoes",
 },
 
 {
@@ -477,6 +526,7 @@ let products = [
     color:"black",
     size:["M","L","XL"],
     stock:{ M:2,L:5,XL:3 },
+    category:"shoes",
 },
 
 {
@@ -487,5 +537,6 @@ let products = [
     color:"white",
     size:["M","L","XL"],
     stock:{ M:1,L:2,XL:0 },
+    category:"shoes",
 },
 ];

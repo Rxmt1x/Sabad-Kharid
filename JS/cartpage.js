@@ -24,7 +24,7 @@ function renderCart(){
         div.innerHTML= `
         <img src="${product.image}"class="image">
         <div class="info">
-        <h4>${product.name}</h4>
+        <h4>${product.name} (${cartItems.size})</h4>
         قیمت واحد:<p>${numbers(product.price)}</p>
         تعداد:<p>${numbers(cartItems.quantity)}</p>  
         قیمت کل: <p>${numbers(fullPrice)}</p>
@@ -64,19 +64,34 @@ function saveCart(){
 
 //item haro ba click be cart ezafe mikone
 
-function add(productId){
-    loadCart();
-    const product=cart.find(p =>p.productId===productId);
-    if(product){
-        product.quantity+=1;
-    }
-    else{
-        cart.push({productId: productId ,quantity:1});
-    }
+function add(productId, size) {
+  loadCart();
 
-saveCart();
-renderCart();
+  const product = products.find(p => p.id === productId);
+  if (!product) return;
+
+  const inStock = product.stock[size];
+  const qty = Stock(productId, size);
+
+  if (qty >= inStockStock) {
+    alert("موجودی این سایز تمام شده");
+    return;
+  }
+
+  const product = cart.find(
+    p => p.productId === productId && p.size === size
+  );
+
+  if (product) {
+    product.stock += 1;
+  } else {
+    cart.push({ productId, size, stock: 1 });
+  }
+
+  saveCart();
+  renderCart();
 }
+
 
 //kam kardan mahsol as cart
 
@@ -100,6 +115,13 @@ function remove(productId){
     renderCart();
 }
 
+//gereftane tedade mahsole dar stock
+
+function Stock(productId,size){
+    const product=cart.find(p =>p.productId===productId&&p.size===size);
+    return product?product.stock:0;
+}
+
 //farsi kardane adad
 
 function numbers(number) {
@@ -107,3 +129,5 @@ function numbers(number) {
 }
 
 renderCart();
+
+

@@ -15,115 +15,12 @@
      <p>تیشرت ها</p>
     </div>
 
-    <div class="boxes">
-
-    <div class="box" onclick="add(1)">
-    <img src="../Images/T shirt/black T.jpg" alt="" height="250" width="300">
-    <p>تیشرت مشکی</p>
-    <a class="price">قیمت:۶۵۰۰۰۰ </a>
-    <div class="addTocart">افزودن به سبد خرید</div>
-    </div>
-
-    <div class="box" onclick="add(2)">
-    <img src="../Images/T shirt/white T.jpg" alt="" height="250" width="300">
-    <p>تیشرت سفید</p>
-    <a class="price">قیمت:۶۵۰۰۰۰</a>
-    <div class="addTocart">افزودن به سبد خرید</div>
-    </div>
-
-    <div class="box" onclick="add(3)">
-    <img src="../Images/T shirt/blue T.avif" alt="" height="250" width="300">
-    <p>تیشرت ابی</p>
-    <a class="price">قیمت:۷۰۰۰۰۰</a>
-    <div class="addTocart">افزودن به سبد خرید</div>
-    </div>
-
-    <div class="box" onclick="add(4)">
-    <img src="../Images/T shirt/black T5.avif" alt="" height="250" width="300">
-    <p>تیشرت مشکی</p>
-    <a class="price">قیمت:۷۰۰۰۰۰</a>
-    <div class="addTocart">افزودن به سبد خرید</div>
-    </div>
-
-    <div class="box" onclick="add(15)">
-    <img src="../Images/T shirt/black T2.webp" alt="" height="250" width="300">
-    <p>تیشرت مشکی</p>
-    <a class="price">قیمت:۸۰۰۰۰۰</a>
-    <div class="addTocart">افزودن به سبد خرید</div>
-    </div>
-
-    <div class="box" onclick="add(16)">
-    <img src="../Images/T shirt/black T3.jpeg" alt="" height="250" width="300">
-    <p>تیشرت مشکی</p>
-    <a class="price">قیمت:۸۰۰۰۰۰</a>
-    <div class="addTocart">افزودن به سبد خرید</div>
-    </div>
-
-    <div class="box" onclick="add(17)">
-    <img src="../Images/T shirt/black T4.jpg" alt="" height="250" width="300">
-    <p>تیشرت مشکی</p>
-    <a class="price">قیمت:۸۰۰۰۰۰</a>
-    <div class="addTocart">افزودن به سبد خرید</div>
-    </div>
-
-    <div class="box" onclick="add(18)">
-    <img src="../Images/T shirt/white T2.jpg" alt="" height="250" width="300">
-    <p>تیشرت سفید</p>
-    <a class="price">قیمت:۷۰۰۰۰۰</a>
-    <div class="addTocart">افزودن به سبد خرید</div>
-    </div>
-
-    <div class="box" onclick="add(19)">
-    <img src="../Images/T shirt/white T3.jpg" alt="" height="250" width="300">
-    <p>تیشرت سفید</p>
-    <a class="price">قیمت:۷۰۰۰۰۰</a>
-    <div class="addTocart">افزودن به سبد خرید</div>
-    </div>
-
-    <div class="box" onclick="add(20)">
-    <img src="../Images/T shirt/white T4.jpg" alt="" height="250" width="300">
-    <p>تیشرت سفید</p>
-    <a class="price">قیمت:۷۰۰۰۰۰</a>
-    <div class="addTocart">افزودن به سبد خرید</div>
-    </div>
-
-    <div class="box" onclick="add(21)">
-    <img src="../Images/T shirt/gray T.jpg" alt="" height="250" width="300">
-    <p>تیشرت طوسی</p>
-    <a class="price">قیمت:۷۵۰۰۰۰</a>
-    <div class="addTocart">افزودن به سبد خرید</div>
-    </div>
-
-    <div class="box" onclick="add(22)">
-    <img src="../Images/T shirt/gray T2.jpg" alt="" height="250" width="300">
-    <p>تیشرت طوسی</p>
-    <a class="price">قیمت:۷۵۰۰۰۰</a>
-    <div class="addTocart">افزودن به سبد خرید</div>
-    </div>
-
-    <div class="box" onclick="add(23)">
-    <img src="../Images/T shirt/gray T3.jpg" alt="" height="250" width="300">
-    <p>تیشرت طوسی</p>
-    <a class="price">قیمت:۷۵۰۰۰۰</a>
-    <div class="addTocart">افزودن به سبد خرید</div>
-    </div>
-
-    <div class="box" onclick="add(24)">
-    <img src="../Images/T shirt/blue T2.png" alt="" height="250" width="300">
-    <p>تیشرت ابی</p>
-    <a class="price">قیمت:۶۵۰۰۰۰</a>
-    <div class="addTocart">افزودن به سبد خرید</div>
-    </div>
-
-    <div class="box" onclick="add(25)">
-    <img src="../Images/T shirt/blue T3.jpg" alt="" height="250" width="300">
-    <p>تیشرت ابی</p>
-    <a class="price">قیمت:۶۵۰۰۰۰</a>
-    <div class="addTocart">افزودن به سبد خرید</div>
-    </div>
-
-    </div>
+    <div class="boxes" id="productList"></div>
+    
     <script src="../JS/products.js"></script>
     <script src="../JS/cartpage.js"></script>
+    <script src="../JS/render-product.js"></script>
+
+    <script> renderProducts("tshirt"); </script>
 </body>
 </html>

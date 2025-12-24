@@ -15,80 +15,12 @@
      <p>کفش ها</p>
     </div>
 
-    <div class="boxes">
-
-    <div class="box" onclick="add(12)">
-    <img src="../Images/shoes/black leather boots.webp" height="250" width="300">
-    <p>بوت چرم مشکی</p>
-    <a class="price">قیمت:۱۴۵۰۰۰۰۰</a>
-    <div class="addTocart">افزودن به سبد خرید</div>
-    </div>
-
-    <div class="box" onclick="add(13)">
-    <img src="../Images/shoes/black Js.avif" height="250" width="300">
-    <p>کتونی مشکی</p>
-    <a class="price">قیمت:۷۵۰۰۰۰۰</a>
-    <div class="addTocart">افزودن به سبد خرید</div>
-    </div>
-
-    <div class="box" onclick="add(14)">
-    <img src="../Images/shoes/white Js.webp" height="250" width="300">
-    <p>کتونی سفید</p>
-    <a class="price">قیمت:۷۰۰۰۰۰۰</a>
-    <div class="addTocart">افزودن به سبد خرید</div>
-    </div>
-
-    <div class="box" onclick="add(43)">
-    <img src="../Images/shoes/white leather boot.jpg" height="250" width="300">
-    <p>بوت چرم سفید</p>
-    <a class="price">قیمت:۱۲۰۰۰۰۰۰</a>
-    <div class="addTocart">افزودن به سبد خرید</div>
-    </div>
-
-    <div class="box" onclick="add(44)">
-    <img src="../Images/shoes/white Js2.jpg" height="250" width="300">
-    <p>کتونی سفید</p>
-    <a class="price">قیمت:۷۰۰۰۰۰۰</a>
-    <div class="addTocart">افزودن به سبد خرید</div>
-    </div>
-
-    <div class="box" onclick="add(45)">
-    <img src="../Images/shoes/white Js3.png" height="250" width="300">
-    <p>کتونی سفید</p>
-    <a class="price">قیمت:۷۰۰۰۰۰۰</a>
-    <div class="addTocart">افزودن به سبد خرید</div>
-    </div>
-
-    <div class="box" onclick="add(46)">
-    <img src="../Images/shoes/black Js2.jpg" height="250" width="300">
-    <p>کتونی مشکی</p>
-    <a class="price">قیمت:۷۵۰۰۰۰۰</a>
-    <div class="addTocart">افزودن به سبد خرید</div>
-    </div>
-
-    <div class="box" onclick="add(47)">
-    <img src="../Images/shoes/black Js3.jpg" height="250" width="300">
-    <p>کتونی مشکی</p>
-    <a class="price">قیمت:۷۵۰۰۰۰۰</a>
-    <div class="addTocart">افزودن به سبد خرید</div>
-    </div>
-
-    <div class="box" onclick="add(48)">
-    <img src="../Images/shoes/black Js4.jpg" height="250" width="300">
-    <p>کتونی مشکی</p>
-    <a class="price">قیمت:۷۵۰۰۰۰۰</a>
-    <div class="addTocart">افزودن به سبد خرید</div>
-    </div>
-
-    <div class="box" onclick="add(49)">
-    <img src="../Images/shoes/white Js4.avif" height="250" width="300">
-    <p>کتونی سفید</p>
-    <a class="price">قیمت:۷۰۰۰۰۰۰</a>
-    <div class="addTocart">افزودن به سبد خرید</div>
-    </div>
-
-    </div>
+    <div class="boxes" id="productList"></div>
+    
     <script src="../JS/products.js"></script>
     <script src="../JS/cartpage.js"></script>
+    <script src="../JS/render-product.js"></script>
+
+    <script> renderProducts("shoes"); </script>
 </body>
 </html>

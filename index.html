@@ -20,6 +20,21 @@
      <a href="HTML/hoodie.html" target="_blank" rel="noopener" class="clothingBox" ><span>هودی</span></a>
      <a href="HTML/shoes.html" target="_blank" rel="noopener" class="clothingBox" ><span>کفش</span></a>
     </div>
+
+        <script>
+      const sizeHTML = product.sizes.map(size => {
+      const inStock = product.stock[size] > 0;
+      return `
+         <button 
+         class="size-btn ${inStock ? "" : "disabled"}"
+         data-size="${size}"
+         ${inStock ? "" : "disabled"}
+         >
+         ${size}
+         </button>
+    `;
+    }).join("");
+    </script>
 <script src="JS/products.js"></script>
 <script src="JS/cartpage.js"></script>
 </body>

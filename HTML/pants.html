@@ -14,74 +14,13 @@
     <a href="cartpage.html" class="cartpage">سبد خرید</a>
     <p>شلوار ها</p>
     </div>
-
-    <div class="boxes">
-
-    <div class="box" onclick="add(5)">
-    <img src="../Images/pants/blue jeans.webp" height="250" width="300">
-    <p>شلوار جین</p>
-    <a class="price">قیمت:۱۰۰۰۰۰۰</a>
-    <div class="addTocart">افزودن به سبد خرید</div>
-    </div>
-
-    <div class="box" onclick="add(6)">
-    <img src="../Images/pants/gray pants.jpg" height="250" width="300">
-    <p>شلوار طوسی</p>
-    <a class="price">قیمت:۱۰۰۰۰۰۰</a>
-    <div class="addTocart">افزودن به سبد خرید</div>
-    </div>
-
-    <div class="box" onclick="add(7)">
-    <img src="../Images/pants/black pants.webp" height="250" width="300">
-    <p>شلوار مشکی</p>
-    <a class="price">قیمت:۱۱۰۰۰۰۰</a>
-    <div class="addTocart">افزودن به سبد خرید</div>
-    </div>
-
-    <div class="box" onclick="add(26)">
-    <img src="../Images/pants/black pants2.webp" height="250" width="300">
-    <p>شلوار مشکی</p>
-    <a class="price">قیمت:۱۱۰۰۰۰۰</a>
-    <div class="addTocart">افزودن به سبد خرید</div>
-    </div>
-
-    <div class="box" onclick="add(27)">
-    <img src="../Images/pants/black pants3.jpeg" height="250" width="300">
-    <p>شلوار مشکی</p>
-    <a class="price">قیمت:۱۱۰۰۰۰۰</a>
-    <div class="addTocart">افزودن به سبد خرید</div>
-    </div>
-
-    <div class="box" onclick="add(28)">
-    <img src="../Images/pants/gray pants2.jpg" height="250" width="300">
-    <p>شلوار طوسی</p>
-    <a class="price">قیمت:۱۰۰۰۰۰۰</a>
-    <div class="addTocart">افزودن به سبد خرید</div>
-    </div>
-
-    <div class="box" onclick="add(29)">
-    <img src="../Images/pants/gray pants3.webp" height="250" width="300">
-    <p>شلوار طوسی</p>
-    <a class="price">قیمت:۱۰۰۰۰۰۰</a>
-    <div class="addTocart">افزودن به سبد خرید</div>
-    </div>
-
-    <div class="box" onclick="add(30)">
-    <img src="../Images/pants/blue jeans2.jpg" height="250" width="300">
-    <p>شلوار جین</p>
-    <a class="price">قیمت:۱۰۰۰۰۰۰</a>
-    <div class="addTocart">افزودن به سبد خرید</div>
-    </div>
-
-    <div class="box" onclick="add(31)">
-    <img src="../Images/pants/blue jeans 3.webp" height="250" width="300">
-    <p>شلوار جین</p>
-    <a class="price">قیمت:۱۰۰۰۰۰۰</a>
-    <div class="addTocart">افزودن به سبد خرید</div>
-    </div>
     
-    </div>
+    <div class="boxes" id="productList"></div>
+    
     <script src="../JS/products.js"></script>
     <script src="../JS/cartpage.js"></script>
+    <script src="../JS/render-product.js"></script>
+
+    <script> renderProducts("pants"); </script>
 </body>
 </html>

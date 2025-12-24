@@ -15,115 +15,12 @@
      <p>هودی ها</p>
     </div>
 
-    <div class="boxes">
-
-    <div class="box" onclick="add(8)">
-    <img src="../Images/hoodie/black hoodie.webp" alt="" height="250" width="300">
-    <P>هودی مشکی</P>
-    <a class="price">قیمت:۹۰۰۰۰۰</a>
-    <div class="addTocart">افزودن به سبد خرید</div>
-    </div>
-
-    <div class="box" onclick="add(9)">
-    <img src="../Images/hoodie/white hoodie.webp" alt="" height="250" width="300">
-    <p>هودی سفید</p>
-    <a class="price">قیمت:۸۵۰۰۰۰</a>
-    <div class="addTocart">افزودن به سبد خرید</div>
-    </div>
-
-    <div class="box" onclick="add(10)">
-    <img src="../Images/hoodie/gray hoodie.webp" alt="" height="250" width="300">
-    <p>هودی طوسی</p>
-    <a class="price">قیمت:۹۰۰۰۰۰</a>
-    <div class="addTocart">افزودن به سبد خرید</div>
-    </div>
-
-    <div class="box" onclick="add(11)">
-    <img src="../Images/hoodie/green hoodie.jpg" alt="" height="250" width="300">
-    <p>هودی سبز</p>
-    <a class="price">قیمت:۸۰۰۰۰۰</a>
-    <div class="addTocart">افزودن به سبد خرید</div>
-    </div>
-
-    <div class="box" onclick="add(32)">
-    <img src="../Images/hoodie/black hoodie2.jpeg" alt="" height="250" width="300">
-    <P>هودی مشکی</P>
-    <a class="price">قیمت:۹۰۰۰۰۰</a>
-    <div class="addTocart">افزودن به سبد خرید</div>
-    </div>
-
-    <div class="box" onclick="add(33)">
-    <img src="../Images/hoodie/black hoodie3.jpg" alt="" height="250" width="300">
-    <P>هودی مشکی</P>
-    <a class="price">قیمت:۹۰۰۰۰۰</a>
-    <div class="addTocart">افزودن به سبد خرید</div>
-    </div>
-
-    <div class="box" onclick="add(34)">
-    <img src="../Images/hoodie/black hoodie4.jpeg" alt="" height="250" width="300">
-    <P>هودی مشکی</P>
-    <a class="price">قیمت:۹۰۰۰۰۰</a>
-    <div class="addTocart">افزودن به سبد خرید</div>
-    </div>
-
-    <div class="box" onclick="add(35)">
-    <img src="../Images/hoodie/white hoodie2.webp" alt="" height="250" width="300">
-    <p>هودی سفید</p>
-    <a class="price">قیمت:۸۵۰۰۰۰</a>
-    <div class="addTocart">افزودن به سبد خرید</div>
-    </div>
-
-    <div class="box" onclick="add(36)">
-    <img src="../Images/hoodie/white hoodie3.jpg" alt="" height="250" width="300">
-    <p>هودی سفید</p>
-    <a class="price">قیمت:۸۵۰۰۰۰</a>
-    <div class="addTocart">افزودن به سبد خرید</div>
-    </div>
-
-    <div class="box" onclick="add(37)">
-    <img src="../Images/hoodie/white hoodie4.jpg" alt="" height="250" width="300">
-    <p>هودی سفید</p>
-    <a class="price">قیمت:۸۵۰۰۰۰</a>
-    <div class="addTocart">افزودن به سبد خرید</div>
-    </div>
-
-    <div class="box" onclick="add(38)">
-    <img src="../Images/hoodie/gray hoodie2.jpeg" alt="" height="250" width="300">
-    <p>هودی طوسی</p>
-    <a class="price">قیمت:۷۰۰۰۰۰</a>
-    <div class="addTocart">افزودن به سبد خرید</div>
-    </div>
-
-    <div class="box" onclick="add(39)">
-    <img src="../Images/hoodie/gray hoodie3.jpg" alt="" height="250" width="300">
-    <p>هودی طوسی</p>
-    <a class="price">قیمت:۷۰۰۰۰۰</a>
-    <div class="addTocart">افزودن به سبد خرید</div>
-    </div>
-
-    <div class="box" onclick="add(40)">
-    <img src="../Images/hoodie/green hoodie2.jpg" alt="" height="250" width="300">
-    <p>هودی سبز</p>
-    <a class="price">قیمت:۷۰۰۰۰۰</a>
-    <div class="addTocart">افزودن به سبد خرید</div>
-    </div>
-
-    <div class="box" onclick="add(41)">
-    <img src="../Images/hoodie/green hoodie3.jpg" alt="" height="250" width="300">
-    <p>هودی سبز</p>
-    <a class="price">قیمت:۷۰۰۰۰۰</a>
-    <div class="addTocart">افزودن به سبد خرید</div>
-    </div>
-
-    <div class="box" onclick="add(42)">
-    <img src="../Images/hoodie/green hoodie4.jpeg" alt="" height="250" width="300">
-    <p>هودی سبز</p>
-    <a class="price">قیمت:۷۰۰۰۰۰</a>
-    <div class="addTocart">افزودن به سبد خرید</div>
-    </div>
-
-    </div>
-    <script src="../JS/productss.js"></script>
+    <div class="boxes" id="productList"></div>
+    
+    <script src="../JS/products.js"></script>
     <script src="../JS/cartpage.js"></script>
+    <script src="../JS/render-product.js"></script>
+
+    <script> renderProducts("hoodie"); </script>
 </body>
 </html>

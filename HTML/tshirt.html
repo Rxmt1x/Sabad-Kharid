@@ -10,9 +10,27 @@
     <title>تیشرت</title>
 </head>
 <body>
-     <div class="header">
-     <a href="cartpage.html" class="cartpage">سبد خرید</a>
-     <p>تیشرت ها</p>
+    <div class="header">
+    <a href="cartpage.html" class="cartpage">سبد خرید</a>
+    <p>تیشرت ها</p>
+    </div>
+    <div class="filter-bar">
+    <div class="filter-group">
+        <select id="colorFilter">
+            <option value="all">همه ی رنگ ها</option>
+        </select>
+    </div>
+
+    <div class="filter-group">
+        <select id="sizeFilter">
+            <option value="all">همه سایزها</option>
+        </select>
+    </div>
+
+    <div class="filter-group sort-group">
+        <button class="sort-btn active" data-sort="desc">گران به ارزان</button>
+        <button class="sort-btn" data-sort="asc">ارزان به گران</button>
+    </div>
     </div>
 
     <div class="boxes" id="productList"></div>
@@ -20,6 +38,7 @@
     <script src="../JS/products.js"></script>
     <script src="../JS/cartpage.js"></script>
     <script src="../JS/render-product.js"></script>
+    <script src="../JS/filter.js"></script>
 
     <script> renderProducts("tshirt"); </script>
 </body>

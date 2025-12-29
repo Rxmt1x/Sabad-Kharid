@@ -13,12 +13,40 @@
     <div class="header">
     <p>پرداخت موفقیت امیز بود</p>
     </div>
+
     <div class="page">
-    <a class="button" href="../index.html" onclick="clearCart()">صفحه اصلی</a>
+    <a class="button" href="../index.html" onclick="completePurchase(); return true;">صفحه اصلی</a>
     </div>
-    
+
+    <script src="../JS/products.js"></script>     
+    <script src="../JS/cartpage.js"></script>      
+
     <script>
-        function clearCart(){localStorage.removeItem("cart");}
+function completePurchase() {
+            const savedCart = localStorage.getItem("cart");
+
+            localStorage.removeItem("cart");
+
+            if (savedCart) {
+                const cart = JSON.parse(savedCart);
+
+                cart.forEach(item => {
+                    const product = products.find(p => p.id === item.productId);
+                    if (product && product.stock?.[item.size] !== undefined) {
+                        product.stock[item.size] -= item.quantity;
+
+                        if (product.stock[item.size] <= 0) {
+                            const original = defaultProducts.find(p => p.id === item.productId);
+                            if (original?.stock?.[item.size] !== undefined) {
+                                product.stock[item.size] = original.stock[item.size];
+                            }
+                        }
+                    }
+                });
+
+                // Save updated stock
+                saveStock();
+            }};
     </script>
 </body>
 </html>

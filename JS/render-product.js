@@ -1,19 +1,33 @@
-function renderProducts(category) {
+function renderProducts(category, filteredProducts = null) {
   const container = document.getElementById("productList");
+  if (!container) return;
+
   container.innerHTML = "";
 
-  const filteredProducts = products.filter(
-    p => p.category === category
-  );
+  // Use the passed filtered/sorted products (from filters.js)
+  // OR if nothing passed → show normal category products
+  let displayProducts;
 
-  filteredProducts.forEach(product => {
+  if (filteredProducts && Array.isArray(filteredProducts)) {
+    displayProducts = filteredProducts;
+  } else {
+    displayProducts = products.filter(p => p.category === category);
+  }
+
+  // Show nice message when no products match
+  if (displayProducts.length === 0) {
+    container.innerHTML = '<p style="text-align:center; padding:4rem; color:#666; font-size:1.3rem;">هیچ محصولی پیدا نشد ☹️</p>';
+    return;
+  }
+
+  displayProducts.forEach(product => {
     const div = document.createElement("div");
     div.className = "box";
 
     const sizesHTML = product.size
-      .filter(q => product.quantity[q] > 0)
+      .filter(q => product.stock[q] > 0)
       .map(q => `
-        <button class="size-btn" data-size="${q}">
+        <button class="sizeBtn" data-size="${q}">
           ${q}
         </button>
       `)
@@ -26,30 +40,27 @@ function renderProducts(category) {
 
       <div class="sizes">${sizesHTML}</div>
 
-      <button class="addTocartBtn">افزودن به سبد خرید</button>
+      <button class="addBtn">افزودن به سبد خرید</button>
     `;
 
     let selectedSize = null;
 
-    div.querySelectorAll(".size-btn").forEach(btn => {
+    div.querySelectorAll(".sizeBtn").forEach(btn => {
       btn.onclick = () => {
         selectedSize = btn.dataset.size;
-        div.querySelectorAll(".size-btn").forEach(b =>
-          b.classList.remove("active")
-        );
+        div.querySelectorAll(".sizeBtn").forEach(b => b.classList.remove("active"));
         btn.classList.add("active");
       };
     });
 
-    div.querySelector(".addTocartBtn").onclick = () => {
+    div.querySelector(".addBtn").onclick = () => {
       if (!selectedSize) {
         alert("لطفاً سایز را انتخاب کنید");
         return;
       }
-      add(product.id, selectedSize);
+      add(product.id, selectedSize);  
     };
 
     container.appendChild(div);
   });
 }
-

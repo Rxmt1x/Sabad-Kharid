@@ -8,9 +8,7 @@
 body{
     background-color:  whitesmoke;
     color: black;
-    line-height: 1.6;
     direction: rtl;
-    font-feature-settings: "ss01";
 }
 .header{
     background-color: #2f7d6d;
@@ -319,28 +317,25 @@ h2{
     color: rgb(110, 110, 110);
 }
 .discount-container {
-    margin: 12px 0;           /* خیلی کوچیک‌تر - تنظیم کن اگه خواستی 200px یا 180px */
-    align-self: flex-end;          /* سمت راست بچسبون */
+    margin: 12px 0;          
+    align-self: flex-end;         
 }
-
 .discount-input-wrapper {
     display: flex;
-    flex-direction: row-reverse;   /* مهم! دکمه رو سمت راست می‌ذاره */
+    flex-direction: row-reverse;   
     border: 2px solid #2f7d6d;
     border-radius: 10px;
-    overflow: hidden;              /* گوشه‌ها تمیز بمونن */
+    overflow: hidden;              
 }
-
 .discount-input-wrapper input {
     flex: 1;
     padding: 3px 0px;
-    border: none;                  /* مرز رو از این برداریم چون wrapper داره */
+    border: none;                  
     font-family: Vazirmatn;
     font-size: 16px;
     direction: rtl;
     text-align: right;
 }
-
 .discount-input-wrapper button {
     padding: 0 24px;
     background: #2f7d6d;
@@ -350,16 +345,12 @@ h2{
     cursor: pointer;
     font-size: 16px;
 }
-
 .discount-input-wrapper button:hover {
     background: #1e5c50;
 }
-
-/* Feedback styles */
 .discount-input-wrapper input.success {
     background: #e8f5e9;
 }
-
 .discount-input-wrapper input.error {
     background: #ffebee;
 }

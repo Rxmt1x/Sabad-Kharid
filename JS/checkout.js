@@ -1,7 +1,6 @@
+let appliedDiscount = 0;
 
-let appliedDiscount = 0;  // درصد تخفیف
-
-const discountCodes = {
+const codes = {
   "11111": 10,
   "22222": 20,
   "33333": 30,
@@ -19,18 +18,14 @@ function numbers(n) {
 
 function renderCheckout() {
   loadCart();
-  
   const container = document.getElementById("item");
   if (!container) return;
-
   container.innerHTML = "";
 
   let subtotal = 0;
-
   if (cart.length === 0) {
-    container.innerHTML = '<p style="color:#666; text-align:center; padding:2rem;">سبد خرید خالی است</p>';
-    appliedDiscount = 0; // ریست تخفیف وقتی سبد خالی شد
-    updateDiscountUI();
+    container.innerHTML = '<p style="color:#2f7d6d; text-align:center; padding:30px;">سبد خرید خالی است</p>';
+    appliedDiscount = 0;
   } else {
     cart.forEach(item => {
       const product = products.find(p => p.id === item.productId);
@@ -57,37 +52,22 @@ function renderCheckout() {
 
   const TAX_RATE = 0.10;
   const VAT_RATE = 0.09;
-
-  const taxAmount = subtotal * TAX_RATE;
-  const vatAmount = subtotal * VAT_RATE;
   const discountAmount = subtotal * (appliedDiscount / 100);
   const afterDiscount = subtotal - discountAmount;
-  const grandTotal = afterDiscount + (afterDiscount * TAX_RATE) + (afterDiscount * VAT_RATE);
+  const taxAmount = afterDiscount * TAX_RATE;
+  const vatAmount =afterDiscount * VAT_RATE;
+  const grandTotal = afterDiscount + taxAmount + vatAmount;
 
   document.getElementById("subtotal").innerText = numbers(subtotal) + " تومان";
-  document.getElementById("tax").innerText     = numbers(Math.round(taxAmount)) + " تومان";
-  document.getElementById("vat").innerText      = numbers(Math.round(vatAmount)) + " تومان";
+  document.getElementById("tax").innerText = numbers(Math.round(taxAmount)) + " تومان";
+  document.getElementById("vat").innerText = numbers(Math.round(vatAmount)) + " تومان";
 
-  // نمایش ردیف تخفیف فقط وقتی اعمال شده
   const discountRow = document.getElementById("discountRow");
   if (discountRow) {
-    if (appliedDiscount > 0) {
-      discountRow.style.display = "block";
-      document.getElementById("discountAmount").innerText = numbers(Math.round(discountAmount)) + " تومان";
-    } else {
-      discountRow.style.display = "none";
-    }
+    discountRow.style.display = appliedDiscount > 0 ? "block" : "none";
+    if (appliedDiscount > 0) document.getElementById("discountAmount").innerText = numbers(Math.round(discountAmount)) + " تومان";
   }
-
   document.getElementById("total").innerText = numbers(Math.round(grandTotal)) + " تومان";
-}
-
-function updateDiscountUI() {
-  const input = document.getElementById("discountCode");
-  if (input) {
-    input.value = "";
-    input.classList.remove("success", "error");
-  }
 }
 
 function applyDiscount() {
@@ -95,24 +75,20 @@ function applyDiscount() {
   if (!codeInput) return;
 
   const code = codeInput.value.trim();
-  const percentage = discountCodes[code];
+  const percentage = codes[code];
 
+  codeInput.classList.remove("success", "error");
   if (percentage) {
     appliedDiscount = percentage;
     codeInput.classList.add("success");
-    codeInput.classList.remove("error");
-    renderCheckout();
   } else {
     codeInput.classList.add("error");
-    codeInput.classList.remove("success");
-    setTimeout(() => {
-      codeInput.classList.remove("error");
-    }, 2000);
+    setTimeout(() => codeInput.classList.remove("error"), 2000);
+    return;
   }
+  renderCheckout();
 }
 
-// Run when page loads
 document.addEventListener("DOMContentLoaded", () => {
   renderCheckout();
-  updateDiscountUI();
 });

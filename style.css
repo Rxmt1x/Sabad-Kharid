@@ -354,6 +354,15 @@ h2{
 .discount-input-wrapper input.error {
     background: #ffebee;
 }
+#discountRow{
+    display: none;
+    color: #2f7d6d ;
+    font-weight: bold;
+}
+#total{
+    color: #2f7d6d ;
+    font-size: 20px;
+}
 /*style safhe pardakht*/
 .payoutPage{
     display: flex;

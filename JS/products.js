@@ -491,13 +491,12 @@ const defaultProducts =[
   category:"shoes"
 },
 ];
-// === LIVE DATA (this one changes) ===
+
 let products = (() => {
-  const saved = localStorage.getItem('shopStock');
+  const saved = localStorage.getItem('stock');
   return saved ? JSON.parse(saved) : JSON.parse(JSON.stringify(defaultProducts));
 })();
 
-// Save function — call this whenever stock changes
 function saveStock() {
-  localStorage.setItem('shopStock', JSON.stringify(products));
-}
+  localStorage.setItem('stock', JSON.stringify(products));
+};

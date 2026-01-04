@@ -55,16 +55,16 @@ function renderCart() {
 function add(productId, size) {
   loadCart();
   
-  const product = products.find(p => p.id === productId); // ← uses live products
+  const product = products.find(p => p.id === productId); 
   if (!product) return;
 
-  const available = product.stock[size] || 0;
+  const inStock = product.stock[size] || 0;
   
   const cartItem = cart.find(i => i.productId === productId && i.size === size);
   const currentQty = cartItem ? cartItem.quantity : 0;
 
-  if (currentQty + 1 > available) {
-    alert(`فقط ${available} عدد از این سایز موجود است!`);
+  if (currentQty + 1 > inStock) {
+    alert(`فقط ${inStock} عدد از این سایز موجود است!`);
     return;
   }
 
